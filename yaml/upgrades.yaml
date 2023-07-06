@@ -3,7 +3,7 @@ domeobel1sk:
   propertyChanges: 
     - dome.maxhealth = 800
     - dome.meleedamageReduction = 0.0/h
-  primaryWeapon: snekobelisk
+  primaryWeapon: obel1sk
 domeobel1skHealthMeter:
   limit: [hostile]
   cost: iron=1
@@ -56,7 +56,7 @@ domeobel1skMaxRestore:
 obel1sk:
   limit: [hostile, primaryweapon]
   propertyChanges:
-    - obelesk.chStyle = 0/h
+    - obel1sk.chStyle = 0/h
     - obel1sk.adStyle = 0/h
     - obel1sk.arcDirectlyToShot = true/h
     - obel1sk.attackType = 0/h

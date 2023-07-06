@@ -3,7 +3,6 @@
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/AmmoDisplaySingle.gd" type="Script" id=1]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/ammo15.png" type="Texture" id=4]
 
-
 [node name="AmmoDisplaySingle" type="Node2D"]
 script = ExtResource( 1 )
 

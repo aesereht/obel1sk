@@ -5,10 +5,10 @@ type="Translation"
 
 [deps]
 
-files=[ "res://mods-unpacked/Snek-Obel1sk/translations/obel1sk_text.en.translation", "res://mods-unpacked/Snek-Obel1sk/translations/obel1sk_text.de.translation" ]
+files=[ "res://mods-unpacked/Snek-Obel1sk/translations/obel1sk_text.en.translation" ]
 
 source_file="res://mods-unpacked/Snek-Obel1sk/translations/obel1sk_text.csv"
-dest_files=[ "res://mods-unpacked/Snek-Obel1sk/translations/obel1sk_text.en.translation", "res://mods-unpacked/Snek-Obel1sk/translations/obel1sk_text.de.translation" ]
+dest_files=[ "res://mods-unpacked/Snek-Obel1sk/translations/obel1sk_text.en.translation" ]
 
 [params]
 

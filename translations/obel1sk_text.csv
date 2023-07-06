@@ -1,3 +1,144 @@
-keys,en,de
-upgrades.domeobel1sk.title,Obel1sk Dome,Obel1sk Dome
-upgrades.domeobel1sk.desc,"Ancient technology, unearthed for your space war crime needs.","Uralte Technologie, geborgen für deine Weltraumkriegsverbrechen."
+keys,en
+upgrades.domeobel1sk.title,Obel1sk Dome
+upgrades.domeobel1sk.desc,"Ancient technology, unearthed for your space war crime needs."
+upgrades.obel1sk.title,The First obel1sk
+upgrades.obel1sk.desc,Introduce the marvel of electricity to whatever is out there. Preferably to the face. At several thousand volts.
+upgrades.obel1skquickreload.title,Voltage Spike
+upgrades.obel1skquickreload.desc,"Adds a brief window to the reloading process, during which the process can be completed prematurely with the help of manual input."
+upgrades.obel1skammokill.title,Monster Recycling
+upgrades.obel1skammokill.desc,"Killing a monster restores ammo. Bonus damage on the last shot."
+upgrades.obel1skreloadtime.title,Reload Efficiency
+upgrades.obel1skreloadtime.desc,"Reduces the duration of reload processes and increases battery recharge speeds."
+upgrades.obel1skreload.title,Reload Speed
+upgrades.obel1skreload.desc,Increases reload speed.
+upgrades.obel1skdamage.title,Bigger Coils
+upgrades.obel1skdamage.desc,Multiplies all direct shot damage.
+upgrades.obel1skslowdamage.title,Lead Plating
+upgrades.obel1skslowdamage.desc,Multiplies direct damage but weighs down the reticle.
+upgrades.obel1skdefault1.title,Heavy Bolts
+upgrades.obel1skdefault1.desc,"Increases damage and explosion radius."
+upgrades.obel1skdefault2.title,Devastator Bolts
+upgrades.obel1skdefault2.desc,"Further increases shot power and slightly increases reticle speed at the cost of fire rate."
+upgrades.obel1skburst1.title,Burst Fire
+upgrades.obel1skburst1.desc,Delivers a cluster of multiple smaller shots onto monsters.
+upgrades.obel1skburst2.title,Feedback Loop
+upgrades.obel1skburst2.desc,Hitting a monster reduces reticle spread.
+upgrades.obel1skspooling1.title,Spool-Up
+upgrades.obel1skspooling1.desc,Holding down the trigger increases fire rate over time. The reticle moves slower while firing.
+upgrades.obel1skspooling2.title,Accelerated Spooling
+upgrades.obel1skspooling2.desc,Reduces the time until maximum fire rate is reached.
+upgrades.obel1skspooling3.title,No More Room
+upgrades.obel1skspooling3.desc,Stuff more cables into the obel1sk to boost its damage potential. Slows down the reticle even more while firing.
+upgrades.obel1sksniperautoaim.title,Automated Targeting System
+upgrades.obel1sksniperautoaim.desc,"After killing a monster, shots will be guaranteed to hit monsters inside the reticle for a limited time."
+upgrades.obel1skstunarea.title,Vapor Trail
+upgrades.obel1skstunarea.desc,Slows down monsters caught in the arcs going to the reticle.
+upgrades.obel1sknukes1.title,Laser Fission
+upgrades.obel1sknukes1.desc,"A devastating radioactive blast that accelerates the reticle for a short time after firing."
+upgrades.obel1sknukes2.title,Echoing Fallout
+upgrades.obel1sknukes2.desc,"Creates a stunning blast around the main explosion that is just as radioactive. Increases time taken until the lightning comes down."
+upgrades.obel1sknukesimpulse.title,Reticle Impulse
+upgrades.obel1sknukesimpulse.desc,"Provides a temporary reticle speed boost after pulling the trigger."
+upgrades.obel1sknukesspreading.title,Contagious Cell Decay
+upgrades.obel1sknukesspreading.desc,"When a monster dies, it spreads radiation to all monsters surrounding it."
+upgrades.obel1sksniper1.title,Precision Bolts
+upgrades.obel1sksniper1.desc,"Single-target shot that deals more damage the longer it rests. Ammo recharges automatically. Reticle can be slowed manually to preserve bonus damage."
+upgrades.obel1sksniper2.title,Charged Munitions
+upgrades.obel1sksniper2.desc,"Hit monsters become conduits for bolts of arcing electricity that propagate through other nearby monsters."
+upgrades.obel1sksniper3.title,Vicious Combo
+upgrades.obel1sksniper3.desc,"After killing a monster, the reticle temporarily stops growing inaccurate from shooting and moving."
+upgrades.obel1sksniperdecayreduction.title,Coil Stabilizers
+upgrades.obel1sksniperdecayreduction.desc,"Reduces the loss of bonus damage charge when moving the reticle without slowing it down."
+upgrades.obel1skspeed1.title,Reticle Speed 1
+upgrades.obel1skspeed1.desc,Increases reticle speed.
+upgrades.obel1skspeed2.title,Reticle Speed 2
+upgrades.obel1skspeed2.desc,Further increases reticle speed.
+upgrades.obel1skoutline.title,Outline
+upgrades.obel1skoutline.desc,Shows you the area of effect when reticle spread is low and the position of the shot can be predicted. Will not work with configurations that use a single-target shot.
+upgrades.obel1skkillstreaks.title,Monster Plasma Harvester
+upgrades.obel1skkillstreaks.desc,"Kill monsters in rapid succession to trigger a discharge that creates a field of static at the reticle's position."
+upgrades.obel1skkillstreaks1speed.title,Greased Lightning
+upgrades.obel1skkillstreaks1speed.desc,"While the field is active, the reticle moves faster and shooting and reloading don't slow it down."
+upgrades.obel1skkillstreaks1reload.title,Cadence Boost
+upgrades.obel1skkillstreaks1reload.desc,"While the field is active, time between shots and reload time are reduced."
+upgrades.obel1skkillstreaks1spread.title,Focus Trance
+upgrades.obel1skkillstreaks1spread.desc,"While the field is active, shooting and moving will not will not grow the reticle inaccurate."
+upgrades.obel1skkillstreaks2damageprogress.title,Monster Blood for the obel1sk God
+upgrades.obel1skkillstreaks2damageprogress.desc,"You gain charge whenever you damage a monster with a shot instead of when they die. When not building charge, charge decays faster."
+upgrades.obel1skkillstreaks2glasshalffull.title,Glass Half Full
+upgrades.obel1skkillstreaks2glasshalffull.desc,"When the field is not active, shots deal more damage if below threshold and the reticle moves faster while at or above threshold."
+upgrades.obel1skbeam1.title,Solar Beam
+upgrades.obel1skbeam1.desc,"Fry monsters with a beam from above. Firing it too long overheats it and it takes a while to cool down again."
+upgrades.obel1skdamagerepeatable.title,Stormsong
+upgrades.obel1skdamagerepeatable.desc,"Continually increase the obel1sk's power."
+upgrades.obel1skbeam3.title,Accelerated Channeling
+upgrades.obel1skbeam3.desc,"Increases ammo handling efficiency."
+upgrades.obel1skcandles.title,Death Candles
+upgrades.obel1skcandles.desc,"Killed monsters leave behind candles that slow down any nearby monsters still alive while they burn out. Larger monsters will spawn longer-burning candles."
+upgrades.obel1skmerciless1.title,Battlefield Capacitor
+upgrades.obel1skmerciless1.desc,"Whenever a monster dies, charge the Battlefield Capacitor. You gain bonus reticle speed and shot damage proportional to its charge with 1 point equalling a 1 percent increase, before efficiency. When not killing a monster for an extended period of time, the capacitor loses all stored energy."
+upgrades.obel1skmerciless2.title,Increased Capacitance
+upgrades.obel1skmerciless2.desc,"Increases the maximum charge that can be stored."
+upgrades.obel1skmerciless3.title,Conductive Casing
+upgrades.obel1skmerciless3.desc,"Increases the conversion rate of charge to damage and retile speed."
+upgrades.obel1skmercilessthresholdhandlingspeed.title,Accelerator Cells
+upgrades.obel1skmercilessthresholdhandlingspeed.desc,"While the capacitor charge is above threshold, reload time and fire rate are improved."
+upgrades.obel1skmercilessthresholdnospread.title,Tension Resistance
+upgrades.obel1skmercilessthresholdnospread.desc,"While the capacitor charge is above threshold, the reticle loses all spread."
+upgrades.obel1skmercilessdamagebuildup.title,Structural Retrofit
+upgrades.obel1skmercilessdamagebuildup.desc,"By attaching the the capacitor directly to the tip of the obel1sk, charge gets built up proportional to any direct damage you deal instead of when monsters die. Stored charge can be contained without decay, however it becomes vastly more volatile in the process."
+upgrades.obel1skbeampiercing.title,Piercing Beam
+upgrades.obel1skbeampiercing.desc,"The beam does not stop at monsters it hits."
+upgrades.obel1skstoredamage.title,Revenge
+upgrades.obel1skstoredamage.desc,"The dome stores damage it takes. When shooting, the stored damage gets added to the shot, up to double its base damage."
+properties.obel1sk.damage,Damage {}
+properties.obel1sk.damagemult,Damage Multiplier {.percent}
+properties.obel1sk.reticlespreadadd,Additional Reticle Spread {}
+properties.obel1sk.singletarget,Single Target Shots
+properties.obel1sk.radiusoutline,Radius Outline for Explosions
+properties.obel1sk.stun,Stun Strength {}
+properties.obel1sk.radius,Explosion Radius {}
+properties.obel1sk.stunradius,Stun Radius {.percent}
+properties.obel1sk.nukeechodps,Radiation Damage per Second {}
+properties.obel1sk.spreadradiationondeath,Spread radiation on death
+properties.obel1sk.explosiondelay,Explosion Delay {}s
+properties.obel1sk.maxrestdamagemult,Maximum Rest Damage Multiplier {.percent}
+properties.obel1sk.fullrestdamageadd,Bonus Damage at Full Rest {}
+properties.obel1sk.arcrange,Arc Range {}
+properties.obel1sk.arcdamage,Arc Base Damage per Second {}
+properties.obel1sk.arcinitialdamage,Damage on Arc {}
+properties.obel1sk.arcdamagepermonster,Bonus Damage per Chained Monster {}
+properties.obel1sk.arcduration,Arc Duration {}s
+properties.obel1sk.maxammo,Ammo Capacity {}
+properties.obel1sk.maxquickreloadwindow,Quick Reload Window {}s
+properties.obel1sk.speedwhileshooting,Reticle Speed While Shooting {.percent}
+properties.obel1sk.batterychargespeed,Ammo Recharge per Second {}
+properties.obel1sk.burstcount,Shots per Burst {}
+properties.obel1sk.speedwhilespecialslow,Precision Speed on Special {.percent}
+properties.obel1sk.shootdelay,Time Between Shots {}s
+properties.obel1sk.shootdelayreduction,Time Between Shots reduced by {}s
+properties.obel1sk.maxshootdelayreduction,Time Reduction at Full Spooling {}s
+properties.obel1sk.shootdelayreductionincrease,Time Reduction Gain {}s
+properties.obel1sk.reloadtime,Reload Time {}s
+properties.obel1sk.batterydelay,Time Before Recharge Starts {}s
+properties.obel1sk.reloadtimereduction,Reload Time Reduction {}s
+properties.obel1sk.reloadtimemult,Reduces all Reload Time to {.percent}
+properties.obel1sk.beamradiancemult,Surrounding Radiance Damage {.percent}
+properties.obel1sk.beamwidth,Beam Width {}
+properties.obel1sk.beamradiancewidth,Radiance Width {}
+properties.obel1sk.piercingbeam,Piercing Beam
+properties.obel1sk.maxreticlespeed,Reticle Speed {}
+properties.obel1sk.ammorefillonkill,Ammo refilled on kill {.percent}
+properties.obel1sk.lastshotdamagemult,Last Shot Damage {.percent}
+properties.obel1sk.spreadlossonkill,Gain complete reticle accuracy on kill
+properties.obel1sk.spreadlossonkillduration,Full accuracy duration {}s
+properties.obel1sk.reticlespeedaddonshoot,Bonus speed after shooting {}
+properties.obel1sk.reticlespeedaddonshootduration,Keep bonus speed for {}s
+properties.obel1sk.restdamagedecaymult,Lose bonus damage at {.percent} speed
+properties.obel1sk.deathcandleminduration,Death Candle minimum lifetime {}s
+properties.obel1sk.deathcandlemaxduration,Death Candle maximum lifetime {}s
+properties.obel1sk.spreaddecreaseonhit,Spread Reduction on Hit {}
+properties.obel1sk.shootingspreadmax,Maximum Shooting Spread {}
+properties.obel1sk.autoaimduration,Auto Aim Duration {}s
+properties.obel1sk.storeddamagemax,Damage Storage Limit {}
+properties.obel1sk.emptyreloadtimemult,Overheat Reload Time {.percent}

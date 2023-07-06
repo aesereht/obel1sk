@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=2]
 
-[ext_resource path="res://content/shared/explosions/Explosion.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/shared/explosions/Explosion.gd" type="Script" id=1]
 [ext_resource path="res://systems/audio/Sound.tscn" type="PackedScene" id=2]
 [ext_resource path="res://content/weapons/obelisk/img/GroundBurst.png" type="Texture" id=3]
 [ext_resource path="res://content/sounds/Events/Meteor/Meteor_03.wav" type="AudioStream" id=4]
@@ -9,6 +9,26 @@
 [ext_resource path="res://content/weapons/obelisk/img/explosionSheet96Ground.png" type="Texture" id=7]
 [ext_resource path="res://content/weapons/obelisk/img/explosionSheet32Air.png" type="Texture" id=8]
 [ext_resource path="res://content/weapons/obelisk/img/explosionSheet24Ground.png" type="Texture" id=9]
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 9 )
+region = Rect2( 24, 0, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 9 )
+region = Rect2( 48, 0, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 9 )
+region = Rect2( 72, 0, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 24, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -58,6 +78,10 @@ region = Rect2( 256, 256, 128, 128 )
 atlas = ExtResource( 3 )
 region = Rect2( 384, 256, 128, 128 )
 
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 32, 32 )
+
 [sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 7 )
 region = Rect2( 0, 0, 96, 96 )
@@ -82,40 +106,16 @@ region = Rect2( 0, 96, 96, 96 )
 atlas = ExtResource( 7 )
 region = Rect2( 96, 96, 96, 96 )
 
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 8 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 9 )
-region = Rect2( 0, 0, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 9 )
-region = Rect2( 24, 0, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 9 )
-region = Rect2( 48, 0, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 9 )
-region = Rect2( 72, 0, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 9 )
-region = Rect2( 0, 24, 24, 24 )
-
 [sub_resource type="SpriteFrames" id=13]
 animations = [ {
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
+"loop": true,
+"name": "24",
+"speed": 10.0
+}, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": false,
 "name": "256",
-"speed": 10.0
-}, {
-"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
-"loop": true,
-"name": "96",
 "speed": 10.0
 }, {
 "frames": [ SubResource( 20 ) ],
@@ -123,9 +123,9 @@ animations = [ {
 "name": "32",
 "speed": 1.0
 }, {
-"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
+"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
 "loop": true,
-"name": "24",
+"name": "96",
 "speed": 10.0
 } ]
 
