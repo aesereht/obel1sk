@@ -51,10 +51,10 @@ func position_on_slider(progress:float, _round:= true):
 	return result
 
 func set_visible(value:bool):
-	if Data.of("obelisk.adStyle") == 1:
+	if Data.of("obel1sk.adStyle") == 1:
 		value = false
 	
-	if Data.of("obelisk.maxQuickReloadWindow") <= 0.0 or Data.of("obelisk.maxQuickReload") == Data.of("obelisk.minQuickReload"):
+	if Data.of("obel1sk.maxQuickReloadWindow") <= 0.0 or Data.of("obel1sk.maxQuickReload") == Data.of("obel1sk.minQuickReload"):
 		$MinBound.visible = false
 		$MaxBound.visible = false
 		$Line2D.visible = false

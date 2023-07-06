@@ -12,7 +12,7 @@ func set_radius(value: float):
 	$Sprite.position.y = value * -0.5
 
 func init(maxAmmo):
-	fade_time = Data.of("obelisk.shootDelay") * 0.18
+	fade_time = Data.of("obel1sk.shootDelay") * 0.18
 	
 #	if maxAmmo > 1:
 #		$Sprite.position.y += $Sprite.texture.get_size().y / 2

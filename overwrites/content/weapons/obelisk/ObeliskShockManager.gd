@@ -21,17 +21,17 @@ func init(originMonster, shotPos):
 	$ArcStatic.play()
 
 func _process(delta: float) -> void:
-	if GameWorld.paused or Data.of("obelisk.arcDuration") == 0.0:
+	if GameWorld.paused or Data.of("obel1sk.arcDuration") == 0.0:
 		$ArcStatic.stream_paused = true
 		return
 	
-	if cur_shockDuration < Data.of("obelisk.arcDuration"):
+	if cur_shockDuration < Data.of("obel1sk.arcDuration"):
 		# hit stuff only when we have at least two monsters between which the arc could exist
 		if actual_shocked_monsters_size() > 1:
 			$ArcStatic.stream_paused = false
 			for sm in shockedMonsters:
 				if is_instance_valid(sm):
-					sm.hit((Data.of("obelisk.arcDamage") + actual_shocked_monsters_size() * Data.of("obelisk.arcDamagePerMonster")) * delta, Data.of("obelisk.arcStun"))
+					sm.hit((Data.of("obel1sk.arcDamage") + actual_shocked_monsters_size() * Data.of("obel1sk.arcDamagePerMonster")) * delta, Data.of("obel1sk.arcStun"))
 					if not arced:
 						var obelisk = Level.dome.find_node("WeaponContainer").get_node("Obelisk")
 						obelisk.cur_arcCooldown = 0.0

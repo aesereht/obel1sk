@@ -11,11 +11,11 @@ var shotType
 
 func init():
 	if singleTarget == null:
-		singleTarget = Data.of("obelisk.singleTarget")
+		singleTarget = Data.of("obel1sk.singleTarget")
 	if radius == null:
-		radius = Data.of("obelisk.radius")
+		radius = Data.of("obel1sk.radius")
 	if shotType == null:
-		shotType = Data.of("obelisk.shotType")
+		shotType = Data.of("obel1sk.shotType")
 	$Lightning.visible = true
 	$Lightning.connect("animation_finished", self, "decrement_blockers")
 	

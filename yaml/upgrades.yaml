@@ -54,9 +54,9 @@ domeobel1skMaxRestore:
 
 
 obel1sk:
-  limit: [hostile]
+  limit: [hostile, primaryweapon]
   propertyChanges:
-    - obel1sk.chStyle = 0/h
+    - obelesk.chStyle = 0/h
     - obel1sk.adStyle = 0/h
     - obel1sk.arcDirectlyToShot = true/h
     - obel1sk.attackType = 0/h

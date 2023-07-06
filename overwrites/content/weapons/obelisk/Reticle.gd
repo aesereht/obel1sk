@@ -11,40 +11,6 @@ var speed_add := 0.0
 var speed_add_duration := 0.0
 var cur_speed_add_duration := 0.0
 
-onready var container = _containerDefault
-onready var segments = _segmentsDefaut
-#onready var dirs = _dirsDefault
-var last_spread: = 0.0 # used to determine the direction of the spread; expand or shrink
-var cur_spread: = 0.0
-var monsterDetectionHighlightsCrosshairs: = true
-var shooting_spread = 0.0
-var last_shooting_spread = 0.0
-
-var hoveredMonsters := [] # used by slowdownOverMonsters. circular collider in the center of the crosshairs with size up to detectionRadius (limited by spread)
-var detectedMonsters := [] # the entire spread area (dynamic)
-var cur_bridgeTime := 0.0
-
-var follow_reticle_target := false
-var cur_reticle_target : ReticleTarget = null
-var is_active := false
-var near_target_slowdown_increase = 0.1
-var cur_near_target_slowdown = 0
-
-var hit_marker_next_frame := false
-var kill_marker_next_frame := false
-var hitMarkerStayTime := 0.35
-var cur_hitMarkerStayTime := 0.0
-const HIT_MARKER = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/HitMarker.tscn")
-const KILL_MARKER = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/KillMarker.tscn")
-const SHOT_READY = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ShotReady.tscn")
-
-var killstreakActive := false
-var special_slow := false
-var hoverOverride := false
-
-var spreadDeactivated := false
-
-enum Styles {Default, Sniper, Nukes, FullAuto, Beam, FullAutoCircle}
 
 var cur_chStyle = 0
 onready var _containerDefault = $DefaultContainer
@@ -98,12 +64,49 @@ onready var _segmentsFACircle = [
 	$FAPoints/Position2D24
 ]
 
+onready var container = _containerDefault
+onready var segments = _segmentsDefaut
+#onready var dirs = _dirsDefault
+var last_spread: = 0.0 # used to determine the direction of the spread; expand or shrink
+var cur_spread: = 0.0
+var monsterDetectionHighlightsCrosshairs: = true
+var shooting_spread = 0.0
+var last_shooting_spread = 0.0
+
+var hoveredMonsters := [] # used by slowdownOverMonsters. circular collider in the center of the crosshairs with size up to detectionRadius (limited by spread)
+var detectedMonsters := [] # the entire spread area (dynamic)
+var cur_bridgeTime := 0.0
+
+var follow_reticle_target := false
+var cur_reticle_target : ReticleTarget = null
+var is_active := false
+var near_target_slowdown_increase = 0.1
+var cur_near_target_slowdown = 0
+
+var hit_marker_next_frame := false
+var kill_marker_next_frame := false
+var hitMarkerStayTime := 0.35
+var cur_hitMarkerStayTime := 0.0
+const HIT_MARKER = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/HitMarker.tscn")
+const KILL_MARKER = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/KillMarker.tscn")
+const SHOT_READY = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ShotReady.tscn")
+
+var killstreakActive := false
+var special_slow := false
+var hoverOverride := false
+
+var spreadDeactivated := false
+
+enum Styles {Default, Sniper, Nukes, FullAuto, Beam, FullAutoCircle}
+
+
+
 var reloading = false
 
 func init():
-	Data.listen(self, "obelisk.chStyle", true)
+	Data.listen(self, "obel1sk.chStyle", true)
 
-	set_style(int(Data.of("obelisk.chStyle")))
+	set_style(int(Data.of("obel1sk.chStyle")))
 	$Outline.visible = canOutlineBeVisible()
 	
 	$HitMarker.visible = false
@@ -115,7 +118,7 @@ func init():
 func propertyChanged(property:String, oldValue, newValue):
 	match property:
 		# ONLY LOWERCASE HERE
-		"obelisk.chstyle":
+		"obel1sk.chStyle":
 			set_style(newValue)
 
 
@@ -163,12 +166,12 @@ func _physics_process(delta: float) -> void:
 	
 	
 	if hoveredMonsters.size() > 0 or cur_bridgeTime > 0.0:
-		motion *= Data.of("obelisk.slowdownOverMonsters")
+		motion *= Data.of("obel1sk.slowdownOverMonsters")
 	
 	position += motion
-	var s = ((maxSpread() - minSpread()) * motion.length()) / Data.of("obelisk.maxReticleSpeed") + minSpread()
+	var s = ((maxSpread() - minSpread()) * motion.length()) / Data.of("obel1sk.maxReticleSpeed") + minSpread()
 	
-	if Data.of("obelisk.specialType") == 2 and special_slow:
+	if Data.of("obel1sk.specialType") == 2 and special_slow:
 		s = max(s*0.7, minSpread())
 	
 	if spreadDeactivated:
@@ -179,19 +182,19 @@ func _physics_process(delta: float) -> void:
 	last_input = input
 
 func minSpread():
-	if spreadDeactivated or Data.of("obelisk.chStyle") == 4:
-		return Data.of("obelisk.minReticleSpread")
+	if spreadDeactivated or Data.of("obel1sk.chStyle") == 4:
+		return Data.of("obel1sk.minReticleSpread")
 	
 	# if the base spread is below center shot threshold and the add would push it over threshold, instead just go up to threshold
-	if Data.of("obelisk.minReticleSpread") <= Data.of("obelisk.guaranteedCenterShotThreshold") and Data.of("obelisk.minReticleSpread") + Data.of("obelisk.reticleSpreadAdd") > Data.of("obelisk.guaranteedCenterShotThreshold"):
-		return Data.of("obelisk.guaranteedCenterShotThreshold")
+	if Data.of("obel1sk.minReticleSpread") <= Data.of("obel1sk.guaranteedCenterShotThreshold") and Data.of("obel1sk.minReticleSpread") + Data.of("obel1sk.reticleSpreadAdd") > Data.of("obel1sk.guaranteedCenterShotThreshold"):
+		return Data.of("obel1sk.guaranteedCenterShotThreshold")
 	
-	return Data.of("obelisk.minReticleSpread") + Data.of("obelisk.reticleSpreadAdd")
+	return Data.of("obel1sk.minReticleSpread") + Data.of("obel1sk.reticleSpreadAdd")
 
 func maxSpread():
-	if spreadDeactivated or Data.of("obelisk.chStyle") == 4:
-		return Data.of("obelisk.maxReticleSpread")
-	return Data.of("obelisk.maxReticleSpread") + Data.of("obelisk.reticleSpreadAdd")
+	if spreadDeactivated or Data.of("obel1sk.chStyle") == 4:
+		return Data.of("obel1sk.maxReticleSpread")
+	return Data.of("obel1sk.maxReticleSpread") + Data.of("obel1sk.reticleSpreadAdd")
 
 func move(dir:Vector2, speed_mod: float):
 	input = dir
@@ -200,13 +203,13 @@ func move(dir:Vector2, speed_mod: float):
 func _process(delta: float) -> void:
 	if GameWorld.paused or not is_active:
 		return
-	if cur_bridgeTime < Data.of("obelisk.monsterSlowdownBridgeTime") and cur_bridgeTime > 0.0:
+	if cur_bridgeTime < Data.of("obel1sk.monsterSlowdownBridgeTime") and cur_bridgeTime > 0.0:
 		cur_bridgeTime += delta
-	elif cur_bridgeTime >= Data.of("obelisk.monsterSlowdownBridgeTime") and hoveredMonsters.size() == 0:
+	elif cur_bridgeTime >= Data.of("obel1sk.monsterSlowdownBridgeTime") and hoveredMonsters.size() == 0:
 		cur_bridgeTime = 0.0
 	
-	if Data.of("obelisk.chStyle") != 5: # if not circle
-		if reloading and not Data.of("obelisk.rechargeAmmo"):
+	if Data.of("obel1sk.chStyle") != 5: # if not circle
+		if reloading and not Data.of("obel1sk.rechargeAmmo"):
 			for ch in container.get_children():
 				ch.set_reload()
 		elif (detectedMonsters.size() > 0 and monsterDetectionHighlightsCrosshairs) or hoverOverride:
@@ -216,14 +219,14 @@ func _process(delta: float) -> void:
 			for ch in container.get_children():
 				ch.set_normal()
 	else:
-		if reloading and not Data.of("obelisk.rechargeAmmo"):
+		if reloading and not Data.of("obel1sk.rechargeAmmo"):
 			$FullAutoCircle.texture = load("res://content/weapons/obelisk/img/crosshairsFACircle_reload.png")
 		elif (detectedMonsters.size() > 0 and monsterDetectionHighlightsCrosshairs) or hoverOverride:
 			$FullAutoCircle.texture = load("res://content/weapons/obelisk/img/crosshairsFACircle_hover.png")
 		else:
 			$FullAutoCircle.texture = load("res://content/weapons/obelisk/img/crosshairsFACircle_no.png")
 	
-	$MonsterDetection/CollisionShape2D.shape.radius = min(cur_spread, Data.of("obelisk.detectionRadius"))
+	$MonsterDetection/CollisionShape2D.shape.radius = min(cur_spread, Data.of("obel1sk.detectionRadius"))
 	
 	if $HitMarker.visible:
 		if cur_hitMarkerStayTime <= hitMarkerStayTime:
@@ -239,8 +242,8 @@ func _process(delta: float) -> void:
 		kill_marker_next_frame = false
 	
 	$Outline.visible = canOutlineBeVisible()
-	if cur_spread - Data.of("obelisk.shootingSpreadMax") < Data.of("obelisk.guaranteedCenterShotThreshold"):
-		var outline_s = (Data.of("obelisk.guaranteedCenterShotThreshold") + Data.of("obelisk.radius")) / 160
+	if cur_spread - Data.of("obel1sk.shootingSpreadMax") < Data.of("obel1sk.guaranteedCenterShotThreshold"):
+		var outline_s = (Data.of("obel1sk.guaranteedCenterShotThreshold") + Data.of("obel1sk.radius")) / 160
 		$Outline.clear_points()
 		for p in $OutlinePoints.get_children():
 			$Outline.add_point(p.position * 0.7 * outline_s)
@@ -249,7 +252,7 @@ func _process(delta: float) -> void:
 	else:
 		$Outline.visible = false
 	
-	if Data.of("obelisk.chStyle") == 5:
+	if Data.of("obel1sk.chStyle") == 5:
 		$FullAutoCircle.clear_points()
 		for p in $FAPoints.get_children():
 			$FullAutoCircle.add_point(p.position)
@@ -275,9 +278,9 @@ func apply_friction(amount, direction:= Vector2.ZERO):
 func apply_movement(acceleration_vec, speed_mod):
 	motion += acceleration_vec
 	
-	var limit = Data.of("obelisk.maxReticleSpeed")
+	var limit = Data.of("obel1sk.maxReticleSpeed")
 	if killstreakActive:
-		limit += Data.of("obelisk.killstreakActiveReticleSpeedAdd")
+		limit += Data.of("obel1sk.killstreakActiveReticleSpeedAdd")
 	
 	limit += speed_add
 	
@@ -296,12 +299,12 @@ func apply_movement(acceleration_vec, speed_mod):
 
 func apply_spread(spread: float, useLerp: bool = true):
 	var expand = last_spread < spread
-	var lerp_strength = Data.of("obelisk.spreadUpSpeed") if expand else  Data.of("obelisk.spreadDownSpeed")
+	var lerp_strength = Data.of("obel1sk.spreadUpSpeed") if expand else  Data.of("obel1sk.spreadDownSpeed")
 	spread += shooting_spread
 	
 	# with negative growth the spread could tend towards 0 or even go into the negatives, so to visually not make the reticle retreat to a single point, this clamps it
-	if spread < abs(Data.of("obelisk.guaranteedCenterShotThreshold")) and Data.of("obelisk.shootingSpreadGrowth") < 0:
-		spread = Data.of("obelisk.guaranteedCenterShotThreshold")
+	if spread < abs(Data.of("obel1sk.guaranteedCenterShotThreshold")) and Data.of("obel1sk.shootingSpreadGrowth") < 0:
+		spread = Data.of("obel1sk.guaranteedCenterShotThreshold")
 	
 	for i in range(segments.size()):
 		# if started shooting, immediately expand the crosshairs to max size
@@ -324,7 +327,7 @@ func apply_spread(spread: float, useLerp: bool = true):
 	last_shooting_spread = shooting_spread
 	
 	var circ_scale = 0
-	if Data.of("obelisk.chStyle") == 5:
+	if Data.of("obel1sk.chStyle") == 5:
 		circ_scale = spread / 160
 	$FAPoints.scale = Vector2(circ_scale, circ_scale)
 
@@ -403,13 +406,13 @@ func showShotReady():
 	hm.z_index = 350
 
 func canOutlineBeVisible() -> bool:
-	if Data.of("obelisk.singleTarget"):
+	if Data.of("obel1sk.singleTarget"):
 		return false
-	if Data.of("obelisk.chStyle") == 4: # beam
+	if Data.of("obel1sk.chStyle") == 4: # beam
 		return false
-	if Data.of("obelisk.chStyle") == 5: # full auto
+	if Data.of("obel1sk.chStyle") == 5: # full auto
 		return false
-	return Data.of("obelisk.radiusOutline") and is_active
+	return Data.of("obel1sk.radiusOutline") and is_active
 
 func set_style(style: int):
 	cur_chStyle = style

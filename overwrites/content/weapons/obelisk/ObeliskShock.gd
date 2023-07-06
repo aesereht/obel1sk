@@ -30,7 +30,7 @@ func init(om):
 	set_physics_process(true)
 	decrement_blockers()
 	
-	radius = Data.of("obelisk.arcRange")
+	radius = Data.of("obel1sk.arcRange")
 	$Area2D/CollisionShape2D.shape.radius = radius
 	
 	Style.init(self)
@@ -52,7 +52,7 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	if framesSinceStart > frameDamageDelay and not emittedDamage:
 		if is_instance_valid(originMonster):
-			originMonster.hit(Data.of("obelisk.arcInitialDamage"),0)
+			originMonster.hit(Data.of("obel1sk.arcInitialDamage"),0)
 		emittedDamage = true
 
 func decrement_blockers():
@@ -74,9 +74,9 @@ func _on_Area2D_area_entered(area: Area2D) -> void:
 		if (not area == originMonster) and cur_registerFrames < SHOCK_REGISTER_FRAMES:
 			# small monsters get instantly fried
 			# this is mostly for performance reasons because spawning a bunch of arcs over a swarm of ticks, only to kill them within the next 2 frames is really taxing on performance without much gameplay or immersion payoff
-			var damage = Data.of("obelisk.arcDamage") * Data.of("obelisk.arcDuration") * 0.1
+			var damage = Data.of("obel1sk.arcDamage") * Data.of("obel1sk.arcDuration") * 0.1
 			if area.maxHealth <= damage or area.currentHealth <= damage:
-				area.hit(damage, Data.of("obelisk.arcStun"))
+				area.hit(damage, Data.of("obel1sk.arcStun"))
 			else:
 				arcedMonsters.append(area)
 				decrement_blockers()

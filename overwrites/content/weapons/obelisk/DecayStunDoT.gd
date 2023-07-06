@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 		return
 	
 	if is_instance_valid(targetMonster):
-		var damage = (logWithBase(stacks, Data.of("obelisk.nukeEchoDps")) * Data.of("obelisk.nukeEchoDps")) + Data.of("obelisk.nukeEchoDps") + stacks
+		var damage = (logWithBase(stacks, Data.of("obel1sk.nukeEchoDps")) * Data.of("obel1sk.nukeEchoDps")) + Data.of("obel1sk.nukeEchoDps") + stacks
 		damage *= delta
 		targetMonster.hit(damage, max(targetMonster.fullStunAt * curStun, targetMonster.fullStunAt * minStun * stacks))
 	

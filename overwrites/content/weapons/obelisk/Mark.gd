@@ -9,4 +9,4 @@ func _process(delta: float) -> void:
 		return
 	
 	if is_instance_valid(targetMonster):
-		targetMonster.hit(0, targetMonster.fullStunAt * Data.of("obelisk.slowMark"))
+		targetMonster.hit(0, targetMonster.fullStunAt * Data.of("obel1sk.slowMark"))

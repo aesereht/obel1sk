@@ -16,7 +16,7 @@ var ended = false
 const PULSE = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/KillstreakEffectPulse.tscn")
 
 func init():
-	radius = Data.of("obelisk.killstreakEffectRadius")
+	radius = Data.of("obel1sk.killstreakEffectRadius")
 	$HitArea/CollisionShape2D.shape.radius = radius
 	$Static.scale /= 166/2/radius
 	$Static.play("static")
@@ -24,7 +24,7 @@ func init():
 	$ArcSFX.connect("finished", self, "decrement_blockers")
 	$PulseSFX.connect("finished", self, "decrement_blockers")
 	
-	cur_pulseDelay = Data.of("obelisk.killstreakEffectPulseDelay") * 0.85
+	cur_pulseDelay = Data.of("obel1sk.killstreakEffectPulseDelay") * 0.85
 	
 	Style.init(self)
 
@@ -36,15 +36,15 @@ func _process(delta: float) -> void:
 		pulse()
 	
 	cur_pulseDelay += delta
-	if cur_pulseDelay >= Data.of("obelisk.killstreakEffectPulseDelay"):
+	if cur_pulseDelay >= Data.of("obel1sk.killstreakEffectPulseDelay"):
 		cur_pulseDelay = 0.0
 	
 	for m in hitMonsters:
-		m.hit(Data.of("obelisk.killstreakEffectStaticDamage") * delta, 0.4)
+		m.hit(Data.of("obel1sk.killstreakEffectStaticDamage") * delta, 0.4)
 
 func pulse():
 	for m in hitMonsters:
-		m.hit(Data.of("obelisk.killstreakEffectPulseDamage"), 50.0)
+		m.hit(Data.of("obel1sk.killstreakEffectPulseDamage"), 50.0)
 	$PulseSFX.play()
 	blockers += 1
 	

@@ -16,21 +16,21 @@ func _process(delta: float) -> void:
 	if GameWorld.paused:
 		return
 	
-	if Data.of("obelisk.mercilessFullLossDelay") > 0.0:
+	if Data.of("obel1sk.mercilessFullLossDelay") > 0.0:
 		cur_loss_delay -= delta
-		if cur_loss_delay <= 0:# Data.of("obelisk.mercilessFullLossDelay"):
+		if cur_loss_delay <= 0:# Data.of("obel1sk.mercilessFullLossDelay"):
 			cur_loss_delay = 0.0
-			set_bonus(Data.of("obelisk.mercilessBase"), false)
+			set_bonus(Data.of("obel1sk.mercilessBase"), false)
 	
-	if Data.of("obelisk.mercilessLossRate") > 0.0:
-		set_bonus(bonus - Data.of("obelisk.mercilessLossRate") * delta, false)
+	if Data.of("obel1sk.mercilessLossRate") > 0.0:
+		set_bonus(bonus - Data.of("obel1sk.mercilessLossRate") * delta, false)
 	
 	
-	if Data.of("obelisk.mercilessFullLossDelay") != 0:
-		var d = (float(cur_loss_delay) / float(Data.of("obelisk.mercilessFullLossDelay")))
+	if Data.of("obel1sk.mercilessFullLossDelay") != 0:
+		var d = (float(cur_loss_delay) / float(Data.of("obel1sk.mercilessFullLossDelay")))
 		fill_bar(d)
-	elif Data.of("obelisk.mercilessLossRate") > 0.0:
-		var d = float(bonus) / float(Data.of("obelisk.mercilessMax"))
+	elif Data.of("obel1sk.mercilessLossRate") > 0.0:
+		var d = float(bonus) / float(Data.of("obel1sk.mercilessMax"))
 		fill_bar(d)
 	else:
 		fill_bar(0)
@@ -40,8 +40,8 @@ func show_value(value):
 	value = int(value)
 	if value > 9999:
 		value = 9999
-	if value < Data.of("obelisk.mercilessBase"):
-		value = Data.of("obelisk.mercilessBase")
+	if value < Data.of("obel1sk.mercilessBase"):
+		value = Data.of("obel1sk.mercilessBase")
 	
 	var s = String(value)
 	while s.length() < 4:
@@ -63,12 +63,12 @@ func add_damage_weight(damage:float):
 	set_bonus(bonus + damage)
 
 func set_bonus(value:float, resetLossDelay:=true):
-	bonus = clamp(value, Data.of("obelisk.mercilessBase"), Data.of("obelisk.mercilessMax"))
+	bonus = clamp(value, Data.of("obel1sk.mercilessBase"), Data.of("obel1sk.mercilessMax"))
 	show_value(bonus)
 	
-	if resetLossDelay: cur_loss_delay = Data.of("obelisk.mercilessFullLossDelay")
+	if resetLossDelay: cur_loss_delay = Data.of("obel1sk.mercilessFullLossDelay")
 	
-	$Threshold.visible = aboveThreshold() and Data.of("obelisk.mercilessThreshold") > 0.0
+	$Threshold.visible = aboveThreshold() and Data.of("obel1sk.mercilessThreshold") > 0.0
 
 func monster_weight(m):
 #	var health = m.maxHealth
@@ -77,7 +77,7 @@ func monster_weight(m):
 #	var weight = (((health + 100) * 0.25) * tier * tier) / groupsize
 #	print(weight)
 #	return weight
-	return ceil(Data.of("obelisk.mercilessGain") / groupsize)
+	return ceil(Data.of("obel1sk.mercilessGain") / groupsize)
 
 func aboveThreshold():
-	return bonus > Data.of("obelisk.mercilessThreshold")
+	return bonus > Data.of("obel1sk.mercilessThreshold")

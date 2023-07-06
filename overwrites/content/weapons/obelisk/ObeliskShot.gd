@@ -43,15 +43,15 @@ var anticipationBaseScale = 1.0
 
 func init():
 	.init()
-	stun = Data.of("obelisk.stun")
-	set_radius(Data.of("obelisk.radius"))
-	explosionDelay = Data.of("obelisk.explosionDelay")
-	singleTarget = Data.of("obelisk.singleTarget")
-	shot_type = int(Data.of("obelisk.shotType"))
+	stun = Data.of("obel1sk.stun")
+	set_radius(Data.of("obel1sk.radius"))
+	explosionDelay = Data.of("obel1sk.explosionDelay")
+	singleTarget = Data.of("obel1sk.singleTarget")
+	shot_type = int(Data.of("obel1sk.shotType"))
 	
 	$Anticipation.visible = explosionDelay > 0.0
-	$AnticipationOutline.visible = Data.of("obelisk.anticipationOutline")
-	anticipationBaseScale = (float(Data.of("obelisk.radius")) * 2) / 55.0
+	$AnticipationOutline.visible = Data.of("obel1sk.anticipationOutline")
+	anticipationBaseScale = (float(Data.of("obel1sk.radius")) * 2) / 55.0
 	$AnticipationOutline.scale = Vector2(anticipationBaseScale, anticipationBaseScale)
 	$AnticipationOutline.playing = true
 	
@@ -100,7 +100,7 @@ func explode():
 	has_exploded = true
 	vfx_explosion()
 	
-	var stun_rad = Data.of("obelisk.stunRadius") * radius
+	var stun_rad = Data.of("obel1sk.stunRadius") * radius
 	var expl_stun
 	if stun_rad > radius:
 		expl_stun = EXPLOSION_STUN.instance()
@@ -121,7 +121,7 @@ func explode():
 	# if we hit sth, put explosion in front of enemies
 	# this is useful for subtle visual hints in the trailing non-hitting frames of the explosion
 	if hitMonsters.size() > 0:
-		if Data.of("obelisk.arcRange") > 0.0 and allowArc:
+		if Data.of("obel1sk.arcRange") > 0.0 and allowArc:
 			var firstMonster = hitMonsters[0]
 			var sm = SHOCK_MANAGER.instance()
 			Level.stage.add_child(sm)
@@ -159,7 +159,7 @@ func explode():
 					decay_stun_dot(m)
 		ShotTypes.Mark:
 			for m in hitMonsters:
-				if Data.of("obelisk.markCurrent") < Data.of("obelisk.markMax") and obelisk.cur_ammo > 0 and not m.monsterFollowerImmunity:
+				if Data.of("obel1sk.markCurrent") < Data.of("obel1sk.markMax") and obelisk.cur_ammo > 0 and not m.monsterFollowerImmunity:
 					if not obelisk.markedMonsters.has(m):
 						obelisk.addToMarkedMonsters(m)
 						var mark = MARK.instance()
@@ -170,16 +170,16 @@ func explode():
 						$HitArea.set_collision_mask_bit(7, false)
 						
 						mark.init()
-						Data.apply("obelisk.markCurrent", int(Data.of("obelisk.markCurrent")) + 1)
+						Data.apply("obel1sk.markCurrent", int(Data.of("obel1sk.markCurrent")) + 1)
 				else:
 					break
 	
 	# shake harder the closer to the dome the shot lands
-	var t = Data.of("obelisk.shootDelay")
+	var t = Data.of("obel1sk.shootDelay")
 	InputSystem.getCamera().shake((900 - abs(global_position.length())) * 0.07, t * 0.5)
 	
 	var audio_player
-	if Data.of("obelisk.shotType") == 1 and hitMonsters.size() > 0: # mark hit something
+	if Data.of("obel1sk.shotType") == 1 and hitMonsters.size() > 0: # mark hit something
 		if shot_type == 0: # triggered explosion of mark
 			$ShotDefault.play() 
 			$ShotDefault.connect("finished", self, "decrement_blockers")
@@ -188,7 +188,7 @@ func explode():
 			$ShotMarkMonster.play()
 			$ShotMarkMonster.connect("finished", self, "decrement_blockers")
 			audio_player = $ShotMarkMonster
-	elif Data.of("obelisk.chStyle") == 1:
+	elif Data.of("obel1sk.chStyle") == 1:
 			$ShotSniper.play()
 			$ShotSniper.connect("finished", self, "decrement_blockers")
 			audio_player = $ShotSniper
@@ -200,18 +200,18 @@ func explode():
 			elif obelisk.cur_ammo > 0 and obelisk.cur_ammo <= obelisk.maxAmmo * 0.25:
 				$ShotSniper.pitch_scale = 0.5
 				$ShotSniper.volume_db -= 3
-	elif Data.of("obelisk.chStyle") == 5: # fullauto plays no shot sfx bc it has static
+	elif Data.of("obel1sk.chStyle") == 5: # fullauto plays no shot sfx bc it has static
 		decrement_blockers()
 	elif obelisk.cur_ammo == 0:
 		$LastShot.play()
 		$LastShot.connect("finished", self, "decrement_blockers")
 		audio_player = $LastShot
 	else:
-		if Data.of("obelisk.chStyle") == 2:
+		if Data.of("obel1sk.chStyle") == 2:
 			$ShotNuke.play()
 			$ShotNuke.connect("finished", self, "decrement_blockers")
 			audio_player = $ShotNuke
-		elif Data.of("obelisk.damage") <=20:
+		elif Data.of("obel1sk.damage") <=20:
 			$ShotStarter.play()
 			$ShotStarter.connect("finished", self, "decrement_blockers")
 			audio_player = $ShotStarter
@@ -225,7 +225,7 @@ func explode():
 			audio_player.pitch_scale = 0.5
 
 func decay_stun_dot(area):
-	if Data.of("obelisk.nukeEchoDps") > 0.0 and not area.monsterFollowerImmunity:
+	if Data.of("obel1sk.nukeEchoDps") > 0.0 and not area.monsterFollowerImmunity:
 		var dot = NUKE_ECHO.instance()
 		Level.stage.add_child(dot)
 		dot.set_monster(area)
@@ -238,7 +238,7 @@ func vfx_explosion():
 	var ground_threshold = -35
 	if shot_type == 1: # mark
 		expl = EXPLOSION_MARK.instance()
-	elif Data.of("obelisk.chStyle") == 1: #sniper
+	elif Data.of("obel1sk.chStyle") == 1: #sniper
 		expl = EXPLOSION_SNIPER.instance()
 		if position.y >= ground_threshold:
 			expl.get_node("Sprite").animation = "ground"
@@ -266,7 +266,7 @@ func vfx_explosion():
 				expl.get_node("Sprite").animation = "96"
 			else:
 				expl.get_node("Sprite").animation = "256"
-	if not Data.of("obelisk.chStyle") == 1:
+	if not Data.of("obel1sk.chStyle") == 1:
 		var sprite = expl.get_node("Sprite")
 		var sprite_size = sprite.get_sprite_frames().get_frame(sprite.animation, 0).get_size()
 		s /= sprite_size.x / 2
@@ -277,7 +277,7 @@ func vfx_explosion():
 	Style.init(expl)
 	Level.stage.add_child(expl)
 	expl.global_position = global_position
-	if Data.of("obelisk.chStyle") == 1 and position.y >= ground_threshold:
+	if Data.of("obel1sk.chStyle") == 1 and position.y >= ground_threshold:
 		expl.global_position.y += -13
 	
 	expl.connect("remove", self, "decrement_blockers")

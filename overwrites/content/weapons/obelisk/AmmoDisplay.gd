@@ -12,7 +12,7 @@ var ammo_displays := []
 var flashing = false
 
 func _ready() -> void:
-	Data.listen(self, "obelisk.adStyle", true)
+	Data.listen(self, "obel1sk.adStyle", true)
 
 func init(newMaxAmmo) -> void:
 	for c in $Singles.get_children():
@@ -41,7 +41,7 @@ func init(newMaxAmmo) -> void:
 
 func propertyChanged(property:String, oldValue, newValue):
 	match property:
-		"obelisk.adstyle":
+		"obel1sk.adstyle":
 			$Singles.visible = newValue == 0
 			$Bar.visible = newValue == 1
 

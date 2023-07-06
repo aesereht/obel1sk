@@ -6,12 +6,12 @@ func setValue(value:int):
 	for c in get_children():
 		if c is AnimatedSprite:
 			var diff = value - displayedDamage
-			if diff >= Data.of("obelisk.damage"):
-				displayedDamage += Data.of("obelisk.damage")
+			if diff >= Data.of("obel1sk.damage"):
+				displayedDamage += Data.of("obel1sk.damage")
 				c.showProgress(1.0)
 				continue
-			elif diff > 0 and diff < Data.of("obelisk.damage"):
-				c.showProgress(float(diff) / float(Data.of("obelisk.damage")))
+			elif diff > 0 and diff < Data.of("obel1sk.damage"):
+				c.showProgress(float(diff) / float(Data.of("obel1sk.damage")))
 				displayedDamage += diff
 				continue
 			

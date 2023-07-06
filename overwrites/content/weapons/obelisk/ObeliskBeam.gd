@@ -16,8 +16,8 @@ var defaultVolume = 0.0
 func init():
 	.init()
 	
-	$AreaCore/Collider.shape.extents.x = Data.of("obelisk.beamWidth")
-	$AreaRadiate/Collider.shape.radius = Data.of("obelisk.beamRadianceWidth")
+	$AreaCore/Collider.shape.extents.x = Data.of("obel1sk.beamWidth")
+	$AreaRadiate/Collider.shape.radius = Data.of("obel1sk.beamRadianceWidth")
 	
 	$EndSFX.connect("finished", self, "decrement_blockers")
 	$Tween.connect("tween_all_completed", self, "decrement_blockers")
@@ -50,13 +50,13 @@ func _process(delta: float) -> void:
 		if is_active:
 			if m.currentHealth <= total_damage() * delta:
 				emit_signal("killedMonster", m)
-			m.hit(total_damage() * delta, Data.of("obelisk.stun") * delta)
+			m.hit(total_damage() * delta, Data.of("obel1sk.stun") * delta)
 			emit_signal("damagedMonster", min(total_damage() * delta, m.maxHealth))
 	
 	for m in closeMonsters:
 		if is_active and not hitMonsters.has(m):
-			var damage_dealt = total_damage() * delta * Data.of("obelisk.beamRadianceMult")
-			var stun = Data.of("obelisk.stun") * delta * Data.of("obelisk.beamRadianceMult")
+			var damage_dealt = total_damage() * delta * Data.of("obel1sk.beamRadianceMult")
+			var stun = Data.of("obel1sk.stun") * delta * Data.of("obel1sk.beamRadianceMult")
 			if m.currentHealth <= damage_dealt:
 				emit_signal("killedMonster", m)
 			m.hit(damage_dealt, stun)

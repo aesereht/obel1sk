@@ -3,16 +3,16 @@ extends Node2D
 
 
 func init():
-	Data.listen(self, "obelisk.markCurrent", true)
-	Data.listen(self, "obelisk.markMax", true)
+	Data.listen(self, "obel1sk.markCurrent", true)
+	Data.listen(self, "obel1sk.markMax", true)
 
 func propertyChanged(property:String, oldValue, newValue):
 	match property:
-		"obelisk.markcurrent": 
+		"obel1sk.markcurrent": 
 			set_mark_count()
-		"obelisk.markmax":
+		"obel1sk.markmax":
 			set_mark_count()
 
 
 func set_mark_count():
-	$Label.text = str(Data.of("obelisk.markCurrent"), "/", Data.of("obelisk.markMax"))
+	$Label.text = str(Data.of("obel1sk.markCurrent"), "/", Data.of("obel1sk.markMax"))
