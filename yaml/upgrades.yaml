@@ -50,6 +50,23 @@ domeobel1skMaxRestore:
   predecessors: [domeobel1skHealth2]
   repeatable:
     - cost.sand += 1
+domeobel1skwavemeter:
+  cost: iron=2
+  predecessors: [domeobel1sk]
+  predecessorsAny: true
+  propertyChanges: 
+    - wavemeter.stage = 1
+domeobel1skwavecount:
+  cost: water=1
+  predecessors: [domeobel1skwavemeter]
+  predecessorsAny: true
+  propertyChanges: 
+    - wavemeter.stage = 2
+domeobel1skResourceCounters:
+  cost: water=1
+  predecessors: [domeobel1sk]
+  predecessorsAny: true
+  hud: content/hud/inventory/Inventory.tscn
 
 
 
@@ -174,7 +191,7 @@ obel1sk:
     - obel1sk.shotsAlongArc = 0/h
     - obel1sk.shootDelayReductionIncrease = 0.04/h
     - obel1sk.spreadDecreaseOnHit = 0/h
-    - obel1sk.piercingBeam = false
+    - obel1sk.piercingBeam = false/h
     - obel1sk.autoAimDuration = 0.0/h
     - obel1sk.stunAlongArc = 0
     - obel1sk.lastShotDamageMult = 0.0/h

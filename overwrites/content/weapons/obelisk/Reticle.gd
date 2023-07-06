@@ -120,7 +120,6 @@ func propertyChanged(property:String, oldValue, newValue):
 		# ONLY LOWERCASE HERE
 		"obel1sk.chstyle":
 			set_style(newValue)
-			print(newValue)
 
 
 func _physics_process(delta: float) -> void:
