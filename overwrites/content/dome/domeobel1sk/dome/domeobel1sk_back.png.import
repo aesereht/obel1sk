@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rocketdome_fly3.png-0ba53cfd455d5ca3ab3f56087805e725.stex"
+path="res://.import/domeobel1sk_back.png-e3b0e60d70f45683946ffd20faba7908.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Snek-Obel1sk/overwrites/content/dome/domeobel1sk/dome/rocketdome_fly3.png"
-dest_files=[ "res://.import/rocketdome_fly3.png-0ba53cfd455d5ca3ab3f56087805e725.stex" ]
+source_file="res://mods-unpacked/Snek-Obel1sk/overwrites/content/dome/domeobel1sk/dome/domeobel1sk_back.png"
+dest_files=[ "res://.import/domeobel1sk_back.png-e3b0e60d70f45683946ffd20faba7908.stex" ]
 
 [params]
 
