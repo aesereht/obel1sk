@@ -15,6 +15,7 @@ func _init(modLoader = ModLoader):
 	
 	# Add extensions
 	ModLoaderMod.install_script_extension(ext_dir + "game/GameWorld.gd")
+	ModLoaderMod.install_script_extension(ext_dir + "stages/level/LevelStage.gd")
 	#ModLoaderMod.install_script_extension(ext_dir + "systems/data/Data.gd")
 	
 	ModLoaderMod.add_translation(trans_dir + "obel1sk_text.en.translation")
