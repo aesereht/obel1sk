@@ -22,3 +22,12 @@ func _init():
 	
 	var ow2 = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/Obelisk.tscn")
 	ow2.take_over_path("res://content/weapons/obel1sk/Obel1sk.tscn")
+	
+	var primaryWeapon = "obel1sk"
+	var ow3 = load(str("res://content/weapons/" + primaryWeapon + "/" + startCaptialized(primaryWeapon) + ".tscn"))
+	ow3.take_over_path(str("res://content/weapons/" + primaryWeapon + "/" + primaryWeapon.capitalize() + ".tscn"))
+
+# so what the fuck is this? well .capitalize() also screws with numbers (i.e. obel1sk becomes Obel 1 sk, not Obel1sk.) Data would have this function but by the time this gets _init() called, Data doesn't exist yet, so this is the copy-pasted function straight from Data
+
+func startCaptialized(s:String):
+	return s.substr(0, 1).to_upper() + s.substr(1, s.length() - 1)
