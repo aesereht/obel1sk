@@ -20,5 +20,5 @@ func _init():
 	var ow1 = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/dome/domeobel1sk/Domeobel1sk.tscn")
 	ow1.take_over_path(GAME_DOME_PATH + "domeobel1sk/Domeobel1sk.tscn")
 	
-	var ow2 = load("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/Obelisk.tscn")
-	ow2.take_over_path("res://content/weapons/obel1sk/Obel1sk.tscn")
+	var ow2 = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/Obelisk.tscn")
+	ow2.take_over_path("res://content/weapons/snekobelisk/Snekobelisk.tscn")

@@ -3,7 +3,7 @@ domeobel1sk:
   propertyChanges: 
     - dome.maxhealth = 800
     - dome.meleedamageReduction = 0.0/h
-  primaryWeapon: obel1sk
+  primaryWeapon: snekobelisk
 domeobel1skHealthMeter:
   limit: [hostile]
   cost: iron=1
