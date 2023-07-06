@@ -1,0 +1,54 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://content/weapons/obelisk/img/deathCandleGlow.png" type="Texture" id=1]
+[ext_resource path="res://content/weapons/obelisk/DeathCandle.gd" type="Script" id=2]
+[ext_resource path="res://content/weapons/obelisk/img/deathCandleSkull.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 33.2415
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 55, 55 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 55, 0, 55, 55 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 110, 0, 55, 55 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 55, 55 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 55, 0, 55, 55 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[node name="DeathCandle" type="CollisionShape2D"]
+shape = SubResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Glow" type="AnimatedSprite" parent="."]
+frames = SubResource( 5 )
+
+[node name="Skull" type="AnimatedSprite" parent="."]
+frames = SubResource( 8 )

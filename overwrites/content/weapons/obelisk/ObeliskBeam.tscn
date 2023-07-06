@@ -1,0 +1,209 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://content/weapons/obelisk/ObeliskBeam.gd" type="Script" id=1]
+[ext_resource path="res://content/weapons/obelisk/img/DownSheet.png" type="Texture" id=2]
+[ext_resource path="res://content/sounds/Weapons/obelisk/beam_sustain.mp3" type="AudioStream" id=3]
+[ext_resource path="res://content/sounds/Weapons/obelisk/beam_stop.wav" type="AudioStream" id=4]
+[ext_resource path="res://content/sounds/Weapons/obelisk/beam_start.wav" type="AudioStream" id=5]
+[ext_resource path="res://systems/audio/Sound.tscn" type="PackedScene" id=6]
+[ext_resource path="res://content/weapons/obelisk/img/beamCore.png" type="Texture" id=7]
+[ext_resource path="res://content/weapons/laser/laser_variations/laser.gdshader" type="Shader" id=8]
+[ext_resource path="res://systems/style/palettes/index_palette.png" type="Texture" id=9]
+[ext_resource path="res://content/weapons/obelisk/img/beamRadiance2.png" type="Texture" id=10]
+[ext_resource path="res://content/weapons/obelisk/img/beamEnd.png" type="Texture" id=11]
+[ext_resource path="res://content/weapons/obelisk/img/beamWindup.png" type="Texture" id=12]
+[ext_resource path="res://content/sounds/Weapons/obelisk/beam_hitstatic.wav" type="AudioStream" id=13]
+[ext_resource path="res://content/weapons/obelisk/img/beamEndHit.png" type="Texture" id=14]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 800, 20 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 20, 800, 20 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.5, 400 )
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 19.0
+height = 808.0
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 8 )
+shader_param/power = 3.212
+shader_param/speed = 1.924
+shader_param/palette = ExtResource( 9 )
+
+[sub_resource type="ShaderMaterial" id=7]
+shader = ExtResource( 8 )
+shader_param/power = 1.103
+shader_param/speed = 2.276
+shader_param/palette = ExtResource( 9 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 40, 28 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 11 )
+region = Rect2( 40, 0, 40, 28 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 28, 40, 28 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 11 )
+region = Rect2( 40, 28, 40, 28 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 56, 40, 28 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 11 )
+region = Rect2( 40, 56, 40, 28 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 0, 40, 70 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 14 )
+region = Rect2( 40, 0, 40, 70 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 14 )
+region = Rect2( 80, 0, 40, 70 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 14 )
+region = Rect2( 120, 0, 40, 70 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 70, 40, 70 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 14 )
+region = Rect2( 40, 70, 40, 70 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 14 )
+region = Rect2( 80, 70, 40, 70 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
+"loop": true,
+"name": "hit",
+"speed": 10.0
+} ]
+
+[node name="ObeliskBeam" type="Node2D"]
+z_index = 100
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, -383 )
+rotation = -1.57079
+z_index = -1
+frames = SubResource( 4 )
+
+[node name="AreaCore" type="Area2D" parent="."]
+z_index = 500
+collision_layer = 0
+collision_mask = 128
+
+[node name="Collider" type="CollisionShape2D" parent="AreaCore"]
+position = Vector2( 0, -395 )
+shape = SubResource( 1 )
+
+[node name="AreaRadiate" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="Collider" type="CollisionShape2D" parent="AreaRadiate"]
+position = Vector2( 0, -411 )
+shape = SubResource( 5 )
+
+[node name="StartSFX" parent="." instance=ExtResource( 6 )]
+streams = [ ExtResource( 5 ) ]
+
+[node name="SustainHitSFX" parent="." instance=ExtResource( 6 )]
+pitch_scale = 0.67
+streams = [ ExtResource( 13 ) ]
+
+[node name="SustainSFX" parent="." instance=ExtResource( 6 )]
+streams = [ ExtResource( 3 ) ]
+
+[node name="EndSFX" parent="." instance=ExtResource( 6 )]
+streams = [ ExtResource( 4 ) ]
+
+[node name="Windup" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 6 )
+position = Vector2( -4, -800 )
+rotation = 1.5708
+scale = Vector2( 1, -1 )
+texture = ExtResource( 12 )
+centered = false
+offset = Vector2( 0, -16 )
+region_enabled = true
+region_rect = Rect2( 12, -1, 800, 40 )
+
+[node name="Radiance" type="Sprite" parent="."]
+visible = false
+material = SubResource( 6 )
+position = Vector2( -4, -800 )
+rotation = 1.5708
+scale = Vector2( 1, -1 )
+texture = ExtResource( 10 )
+centered = false
+offset = Vector2( 0, -16 )
+region_enabled = true
+region_rect = Rect2( 12, 5, 800, 40 )
+
+[node name="Core" type="Sprite" parent="."]
+visible = false
+material = SubResource( 7 )
+position = Vector2( 4, -799 )
+rotation = -1.5708
+scale = Vector2( -1, 1 )
+texture = ExtResource( 7 )
+centered = false
+offset = Vector2( 0, -16 )
+region_enabled = true
+region_rect = Rect2( 12, 9, 800, 22 )
+
+[node name="Hit" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, 9 )
+rotation = -1.57079
+frames = SubResource( 10 )
+animation = "hit"
+frame = 2
+playing = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="area_entered" from="AreaCore" to="." method="_on_AreaCore_area_entered"]
+[connection signal="area_exited" from="AreaCore" to="." method="_on_AreaCore_area_exited"]
+[connection signal="area_entered" from="AreaRadiate" to="." method="_on_AreaRadiate_area_entered"]
+[connection signal="area_exited" from="AreaRadiate" to="." method="_on_AreaRadiate_area_exited"]

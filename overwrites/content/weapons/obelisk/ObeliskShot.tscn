@@ -1,0 +1,155 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://content/weapons/obelisk/ObeliskShot.gd" type="Script" id=1]
+[ext_resource path="res://content/sounds/Weapons/obelisk/lightning_down.wav" type="AudioStream" id=2]
+[ext_resource path="res://content/weapons/obelisk/img/anticipationSheet.png" type="Texture" id=3]
+[ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_03.wav" type="AudioStream" id=4]
+[ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_02.wav" type="AudioStream" id=5]
+[ext_resource path="res://content/sounds/Weapons/obelisk/nukes.wav" type="AudioStream" id=6]
+[ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_01.wav" type="AudioStream" id=7]
+[ext_resource path="res://content/sounds/Weapons/obelisk/lightning_down_full_auto.wav" type="AudioStream" id=8]
+[ext_resource path="res://content/sounds/Weapons/obelisk/apply_mark.wav" type="AudioStream" id=9]
+[ext_resource path="res://content/sounds/Weapons/obelisk/lightning_down_small.wav" type="AudioStream" id=10]
+[ext_resource path="res://systems/audio/Sound.tscn" type="PackedScene" id=11]
+[ext_resource path="res://content/sounds/Weapons/obelisk/digital-ride-2.wav" type="AudioStream" id=12]
+[ext_resource path="res://content/weapons/obelisk/img/deathCandleGlow.png" type="Texture" id=13]
+[ext_resource path="res://content/sounds/Weapons/obelisk/SingleShot_01.wav" type="AudioStream" id=14]
+[ext_resource path="res://content/sounds/Weapons/obelisk/SingleShot_02.wav" type="AudioStream" id=15]
+[ext_resource path="res://content/sounds/Weapons/obelisk/SingleShot_03.wav" type="AudioStream" id=16]
+[ext_resource path="res://content/sounds/Weapons/obelisk/SingleShot_04.wav" type="AudioStream" id=17]
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 55, 55 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 13 )
+region = Rect2( 55, 0, 55, 55 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 13 )
+region = Rect2( 110, 0, 55, 55 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 7, 13 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 3 )
+region = Rect2( 7, 0, 7, 13 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 3 )
+region = Rect2( 14, 0, 7, 13 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 3 )
+region = Rect2( 21, 0, 7, 13 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 13, 7, 13 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 3 )
+region = Rect2( 7, 13, 7, 13 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 3 )
+region = Rect2( 14, 13, 7, 13 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 3 )
+region = Rect2( 21, 13, 7, 13 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 20.0
+
+[node name="ObeliskShot" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnticipationOutline" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 24 )
+
+[node name="Anticipation" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 12 )
+frame = 3
+playing = true
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+shape = SubResource( 3 )
+
+[node name="ShotMarkMonster" parent="." instance=ExtResource( 11 )]
+bus = "Sounds"
+streams = [ ExtResource( 9 ) ]
+
+[node name="LastShotSniper" parent="." instance=ExtResource( 11 )]
+volume_db = -7.547
+pitch_scale = 0.37
+bus = "Sounds"
+randomVolume = 0.5
+randomPitch = 0.03
+streams = [ ExtResource( 12 ) ]
+
+[node name="ShotSniper" parent="." instance=ExtResource( 11 )]
+bus = "Sounds"
+streams = [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 4 ) ]
+
+[node name="ShotNuke" parent="." instance=ExtResource( 11 )]
+bus = "Sounds"
+streams = [ ExtResource( 6 ) ]
+
+[node name="ShotFullAuto" parent="." instance=ExtResource( 11 )]
+pitch_scale = 1.16
+bus = "Sounds"
+streams = [ ExtResource( 8 ) ]
+
+[node name="ShotStarter" parent="." instance=ExtResource( 11 )]
+bus = "Sounds"
+streams = [ ExtResource( 10 ) ]
+
+[node name="ShotDefault" parent="." instance=ExtResource( 11 )]
+pitch_scale = 1.76
+bus = "Sounds"
+streams = [ ExtResource( 2 ) ]
+
+[node name="ShotDefault2" parent="ShotDefault" instance=ExtResource( 11 )]
+volume_db = 3.221
+bus = "Sounds"
+randomPitch = 0.0
+streams = [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ]
+
+[node name="AmmoLowShot" parent="." instance=ExtResource( 11 )]
+stream = ExtResource( 4 )
+pitch_scale = 1.89
+bus = "Sounds"
+
+[node name="LastShot" parent="." instance=ExtResource( 11 )]
+stream = ExtResource( 4 )
+volume_db = 8.701
+bus = "Sounds"
+
+[connection signal="area_entered" from="HitArea" to="." method="_on_HitArea_area_entered"]
+[connection signal="area_exited" from="HitArea" to="." method="_on_HitArea_area_exited"]

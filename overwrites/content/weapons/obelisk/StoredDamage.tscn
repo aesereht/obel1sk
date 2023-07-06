@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://content/weapons/obelisk/img/storedDamage.png" type="Texture" id=1]
+[ext_resource path="res://content/weapons/obelisk/StoredDamageSingle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://content/weapons/obelisk/StoredDamage.gd" type="Script" id=3]
+
+[node name="storedDamage" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="StoredDamage" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="storedDamageSingle" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2, 2 )
+
+[node name="storedDamageSingle2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5, 2 )
+
+[node name="storedDamageSingle3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 2 )
+
+[node name="storedDamageSingle4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 11, 2 )
+
+[node name="storedDamageSingle5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 14, 2 )
+
+[node name="storedDamageSingle6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 17, 2 )
+
+[node name="storedDamageSingle7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 20, 2 )
+
+[node name="storedDamageSingle8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23, 2 )
+
+[node name="storedDamageSingle9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2, 7 )
+
+[node name="storedDamageSingle10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5, 7 )
+
+[node name="storedDamageSingle11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 7 )
+
+[node name="storedDamageSingle12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 11, 7 )
+
+[node name="storedDamageSingle13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 14, 7 )
+
+[node name="storedDamageSingle14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 17, 7 )
+
+[node name="storedDamageSingle15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 20, 7 )
+
+[node name="storedDamageSingle16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23, 7 )

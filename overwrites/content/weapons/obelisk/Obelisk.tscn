@@ -1,0 +1,271 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://content/weapons/obelisk/Obelisk.gd" type="Script" id=1]
+[ext_resource path="res://content/gadgets/obelisk/obelisk.png" type="Texture" id=2]
+[ext_resource path="res://content/weapons/obelisk/Reticle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_02.wav" type="AudioStream" id=4]
+[ext_resource path="res://content/weapons/obelisk/ObeliskLightning.tscn" type="PackedScene" id=5]
+[ext_resource path="res://content/sounds/Weapons/obelisk/lightning_up.wav" type="AudioStream" id=6]
+[ext_resource path="res://content/sounds/Weapons/obelisk/_loo.wav" type="AudioStream" id=7]
+[ext_resource path="res://content/sounds/Weapons/obelisk/reload_finish2.wav" type="AudioStream" id=8]
+[ext_resource path="res://content/sounds/Weapons/obelisk/weapon_stop.wav" type="AudioStream" id=9]
+[ext_resource path="res://content/sounds/Weapons/obelisk/weapon_start.wav" type="AudioStream" id=10]
+[ext_resource path="res://content/sounds/Weapons/obelisk/reload_start.wav" type="AudioStream" id=11]
+[ext_resource path="res://content/weapons/obelisk/MercilessTracker.tscn" type="PackedScene" id=12]
+[ext_resource path="res://systems/audio/Sound.tscn" type="PackedScene" id=13]
+[ext_resource path="res://content/sounds/Weapons/obelisk/reload.wav" type="AudioStream" id=14]
+[ext_resource path="res://content/weapons/obelisk/QuickReload.tscn" type="PackedScene" id=15]
+[ext_resource path="res://content/sounds/Weapons/obelisk/Head_GUNFACE.wav" type="AudioStream" id=16]
+[ext_resource path="res://content/sounds/Weapons/obelisk/quick_fail.wav" type="AudioStream" id=17]
+[ext_resource path="res://content/weapons/obelisk/AmmoDisplay.tscn" type="PackedScene" id=18]
+[ext_resource path="res://content/sounds/Weapons/obelisk/pure lil_4.wav" type="AudioStream" id=19]
+[ext_resource path="res://content/weapons/obelisk/img/allcolors.PNG" type="Texture" id=20]
+[ext_resource path="res://content/weapons/obelisk/BonusDamageDisplay.tscn" type="PackedScene" id=21]
+[ext_resource path="res://content/weapons/obelisk/MarkCounter.tscn" type="PackedScene" id=22]
+[ext_resource path="res://content/sounds/Weapons/obelisk/detonate_marks.wav" type="AudioStream" id=23]
+[ext_resource path="res://content/weapons/obelisk/ObeliskShockArc.tscn" type="PackedScene" id=24]
+[ext_resource path="res://content/sounds/Weapons/obelisk/ShotgunContinous_1.wav" type="AudioStream" id=25]
+[ext_resource path="res://content/weapons/obelisk/KillstreakTracker.tscn" type="PackedScene" id=26]
+[ext_resource path="res://content/weapons/obelisk/img/outlineLineTexture.png" type="Texture" id=27]
+[ext_resource path="res://content/weapons/obelisk/DeathCandleArea.gd" type="Script" id=28]
+[ext_resource path="res://content/weapons/obelisk/img/autoAimActive.png" type="Texture" id=29]
+[ext_resource path="res://content/weapons/obelisk/img/autoAimInctive.png" type="Texture" id=30]
+[ext_resource path="res://content/weapons/obelisk/StoredDamage.tscn" type="PackedScene" id=31]
+[ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_01.wav" type="AudioStream" id=32]
+[ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_03.wav" type="AudioStream" id=33]
+[ext_resource path="res://content/sounds/Weapons/obelisk/obelisk_overheat.wav" type="AudioStream" id=34]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 30 )
+region = Rect2( 0, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 30 )
+region = Rect2( 18, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 30 )
+region = Rect2( 36, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 30 )
+region = Rect2( 54, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 29 )
+region = Rect2( 0, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 29 )
+region = Rect2( 18, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 29 )
+region = Rect2( 36, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 29 )
+region = Rect2( 54, 0, 18, 18 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "inactive",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "active",
+"speed": 5.0
+} ]
+
+[node name="Obelisk" type="Node2D" groups=["primaryWeapon"]]
+z_index = -3
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 43.0
+margin_top = -91.0
+margin_right = 83.0
+margin_bottom = -77.0
+
+[node name="StoredDamage" parent="." instance=ExtResource( 31 )]
+position = Vector2( 5, -77 )
+
+[node name="Arc" parent="." instance=ExtResource( 24 )]
+width = 5.689
+visual = true
+subArc = true
+
+[node name="KillstreakTracker" parent="." instance=ExtResource( 26 )]
+position = Vector2( 49, -33 )
+
+[node name="MercilessTracker" parent="." instance=ExtResource( 12 )]
+position = Vector2( 38, -53 )
+
+[node name="Allcolors" type="Sprite" parent="."]
+visible = false
+position = Vector2( 126, -233 )
+texture = ExtResource( 20 )
+
+[node name="QuickReload" parent="." instance=ExtResource( 15 )]
+position = Vector2( -1, -39 )
+rotation = -1.5708
+z_index = 101
+
+[node name="Reticle" parent="." instance=ExtResource( 3 )]
+z_index = 80
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -45 )
+z_index = 100
+texture = ExtResource( 2 )
+
+[node name="MarkCounter" parent="." instance=ExtResource( 22 )]
+position = Vector2( -1, -148 )
+
+[node name="AmmoDisplay" parent="." instance=ExtResource( 18 )]
+position = Vector2( 0, -85 )
+z_index = 102
+radius = 21
+
+[node name="BonusDamageDisplay" parent="." instance=ExtResource( 21 )]
+position = Vector2( -15, -6 )
+z_index = 100
+
+[node name="ArcOrigin" type="Position2D" parent="."]
+position = Vector2( 0, -84 )
+
+[node name="BeamOutline" type="Line2D" parent="."]
+width = 2.0
+texture = ExtResource( 27 )
+texture_mode = 1
+
+[node name="ReticleSpawn" type="Position2D" parent="."]
+position = Vector2( 0, -86 )
+
+[node name="ObeliskLightning" parent="." instance=ExtResource( 5 )]
+
+[node name="BeamTargetPointer" type="RayCast2D" parent="."]
+enabled = true
+collision_mask = 128
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="DeathCandleArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 128
+script = ExtResource( 28 )
+
+[node name="ArcStunArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="Shape" type="CollisionShape2D" parent="ArcStunArea"]
+shape = SubResource( 1 )
+
+[node name="AutoAim" type="AnimatedSprite" parent="."]
+position = Vector2( 36, -31 )
+frames = SubResource( 10 )
+animation = "inactive"
+
+[node name="TweenReturnReticle" type="Tween" parent="."]
+
+[node name="TweenShoot" type="Tween" parent="."]
+
+[node name="TweenAmmo" type="Tween" parent="."]
+
+[node name="TweenReload" type="Tween" parent="."]
+
+[node name="ArcUp" type="Tween" parent="."]
+
+[node name="LightningUpSound" parent="." instance=ExtResource( 13 )]
+volume_db = 3.314
+bus = "Sounds"
+randomVolume = 1.3
+randomPitch = 0.03
+streams = [ ExtResource( 6 ) ]
+
+[node name="ReloadStaticSound" parent="." instance=ExtResource( 13 )]
+volume_db = 8.785
+bus = "Sounds"
+randomVolume = 1.1
+streams = [ ExtResource( 7 ) ]
+
+[node name="StartSound" parent="." instance=ExtResource( 13 )]
+bus = "Sounds"
+randomPitch = 0.03
+streams = [ ExtResource( 10 ) ]
+
+[node name="StopSound" parent="." instance=ExtResource( 13 )]
+bus = "Sounds"
+streams = [ ExtResource( 9 ) ]
+
+[node name="ReloadStartSound" parent="." instance=ExtResource( 13 )]
+bus = "Sounds"
+streams = [ ExtResource( 11 ) ]
+
+[node name="ReloadStartSound2" parent="ReloadStartSound" instance=ExtResource( 13 )]
+bus = "Sounds"
+streams = [ ExtResource( 14 ) ]
+
+[node name="ReloadFinishSound" parent="." instance=ExtResource( 13 )]
+volume_db = -8.351
+bus = "Sounds"
+streams = [ ExtResource( 8 ) ]
+
+[node name="ReadyLightning" parent="." instance=ExtResource( 13 )]
+volume_db = -12.722
+pitch_scale = 2.27
+bus = "Sounds"
+streams = [ ExtResource( 19 ) ]
+
+[node name="ReadyLightning2" parent="ReadyLightning" instance=ExtResource( 13 )]
+volume_db = -12.285
+pitch_scale = 1.7
+bus = "Sounds"
+streams = [ ExtResource( 11 ) ]
+
+[node name="QuickReloadSuccess" parent="." instance=ExtResource( 13 )]
+volume_db = -4.369
+pitch_scale = 1.35
+bus = "Sounds"
+streams = [ ExtResource( 16 ) ]
+
+[node name="QuickReloadFail" parent="." instance=ExtResource( 13 )]
+volume_db = -6.745
+bus = "Sounds"
+streams = [ ExtResource( 17 ) ]
+
+[node name="DetonateMarks" parent="." instance=ExtResource( 13 )]
+bus = "Sounds"
+streams = [ ExtResource( 23 ) ]
+
+[node name="FullAutoSound" parent="." instance=ExtResource( 13 )]
+volume_db = 8.283
+bus = "Sounds"
+randomVolume = 0.4
+randomPitch = 0.06
+streams = [ ExtResource( 25 ) ]
+loop = true
+
+[node name="AmmoRecharge" parent="." instance=ExtResource( 13 )]
+volume_db = -14.586
+pitch_scale = 1.58
+bus = "Sounds"
+randomVolume = 1.6
+randomPitch = 0.06
+streams = [ ExtResource( 32 ), ExtResource( 4 ), ExtResource( 33 ) ]
+
+[node name="Overheat" parent="." instance=ExtResource( 13 )]
+streams = [ ExtResource( 34 ) ]
+loop = true
+
+[connection signal="area_entered" from="DeathCandleArea" to="DeathCandleArea" method="_on_DeathCandleArea_area_entered"]
+[connection signal="area_exited" from="DeathCandleArea" to="DeathCandleArea" method="_on_DeathCandleArea_area_exited"]
+[connection signal="area_entered" from="ArcStunArea" to="." method="_on_ArcStunArea_area_entered"]
+[connection signal="area_exited" from="ArcStunArea" to="." method="_on_ArcStunArea_area_exited"]

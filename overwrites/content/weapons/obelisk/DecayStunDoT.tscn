@@ -1,0 +1,88 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://content/weapons/obelisk/DecayStunDoT.gd" type="Script" id=1]
+[ext_resource path="res://content/weapons/obelisk/img/radiation.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 18, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 36, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 54, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 18, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 18, 18, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 36, 18, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 54, 18, 18, 18 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Gradient" id=11]
+offsets = PoolRealArray( 0.243816, 0.537102, 0.717314, 0.989399 )
+colors = PoolColorArray( 0.439216, 1, 0, 1, 0.407843, 0.941176, 0, 1, 0.345098, 0.427451, 0, 1, 0.231373, 0.203922, 0.380392, 1 )
+
+[sub_resource type="GradientTexture" id=12]
+gradient = SubResource( 11 )
+
+[sub_resource type="ParticlesMaterial" id=10]
+lifetime_randomness = 0.5
+emission_shape = 1
+emission_sphere_radius = 0.01
+flag_disable_z = true
+gravity = Vector3( 0, -1, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = -4.69
+radial_accel = 28.22
+radial_accel_random = 0.71
+damping = 1.71
+scale_random = 0.5
+color_ramp = SubResource( 12 )
+
+[node name="DecayStunDoT" type="Node2D"]
+script = ExtResource( 1 )
+techId = "decaystundot"
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 9 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 16.0
+margin_top = -6.0
+margin_right = 56.0
+margin_bottom = 8.0
+
+[node name="Particles2D" type="Particles2D" parent="."]
+amount = 20
+lifetime = 1.66
+preprocess = 2.0
+speed_scale = 0.44
+process_material = SubResource( 10 )
