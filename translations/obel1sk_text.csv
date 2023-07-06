@@ -142,3 +142,4 @@ properties.obel1sk.shootingspreadmax,Maximum Shooting Spread {}
 properties.obel1sk.autoaimduration,Auto Aim Duration {}s
 properties.obel1sk.storeddamagemax,Damage Storage Limit {}
 properties.obel1sk.emptyreloadtimemult,Overheat Reload Time {.percent}
+level.station.battle.navbar.slowreticle,Slow Reticle
