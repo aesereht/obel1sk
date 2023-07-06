@@ -69,7 +69,7 @@ _data = {
 }
 
 [node name="Dome" instance=ExtResource( 1 )]
-techId = "dome4"
+techId = "domeobel1sk"
 
 [node name="Ambience" parent="." index="0"]
 stream = ExtResource( 10 )

@@ -26,6 +26,9 @@ func _ready():
 func modInit():
 	Data.registerDome("domeobel1sk")
 	
+	var pathToModYaml : String = ModLoaderMod.get_unpacked_dir() + MYMODNAME_MOD_DIR + "yaml/"
+	Data.parseUpgradesYaml(pathToModYaml + "upgrades.yaml")
+	
 
 
 
