@@ -34,9 +34,9 @@ var hit_marker_next_frame := false
 var kill_marker_next_frame := false
 var hitMarkerStayTime := 0.35
 var cur_hitMarkerStayTime := 0.0
-const HIT_MARKER = preload("res://content/weapons/obelisk/HitMarker.tscn")
-const KILL_MARKER = preload("res://content/weapons/obelisk/KillMarker.tscn")
-const SHOT_READY = preload("res://content/weapons/obelisk/ShotReady.tscn")
+const HIT_MARKER = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/HitMarker.tscn")
+const KILL_MARKER = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/KillMarker.tscn")
+const SHOT_READY = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ShotReady.tscn")
 
 var killstreakActive := false
 var special_slow := false

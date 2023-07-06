@@ -1,7 +1,7 @@
 extends Node2D
 
 
-const NUKE_ECHO = preload("res://content/weapons/obelisk/DecayStunDoT.tscn")
+const NUKE_ECHO = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/DecayStunDoT.tscn")
 
 var sustainFrames := 3
 

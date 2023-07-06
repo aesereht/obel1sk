@@ -1,7 +1,8 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://content/weapons/obelisk/StoredDamageSingle.gd" type="Script" id=1]
-[ext_resource path="res://content/weapons/obelisk/img/storedDamageSingle.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/StoredDamageSingle.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/storedDamageSingle.png" type="Texture" id=2]
+
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )

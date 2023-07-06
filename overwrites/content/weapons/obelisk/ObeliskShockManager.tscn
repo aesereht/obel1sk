@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://content/weapons/obelisk/ObeliskShockManager.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskShockManager.gd" type="Script" id=1]
 [ext_resource path="res://content/sounds/Weapons/obelisk/ShotgunContinous_1.wav" type="AudioStream" id=2]
 [ext_resource path="res://systems/audio/Sound.tscn" type="PackedScene" id=3]
 

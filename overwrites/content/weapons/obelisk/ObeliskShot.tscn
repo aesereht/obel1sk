@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=2]
 
-[ext_resource path="res://content/weapons/obelisk/ObeliskShot.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskShot.gd" type="Script" id=1]
 [ext_resource path="res://content/sounds/Weapons/obelisk/lightning_down.wav" type="AudioStream" id=2]
 [ext_resource path="res://content/weapons/obelisk/img/anticipationSheet.png" type="Texture" id=3]
 [ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_03.wav" type="AudioStream" id=4]
@@ -91,7 +91,6 @@ frames = SubResource( 24 )
 [node name="Anticipation" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 12 )
-frame = 3
 playing = true
 
 [node name="HitArea" type="Area2D" parent="."]

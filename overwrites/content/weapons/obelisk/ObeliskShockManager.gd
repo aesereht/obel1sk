@@ -13,8 +13,8 @@ var shockedMonsters := []
 var shocks := []
 var arcs := []
 
-const SHOCK = preload("res://content/weapons/obelisk/ObeliskShock.tscn")
-const ARC = preload("res://content/weapons/obelisk/ObeliskShockArc.tscn")
+const SHOCK = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskShock.tscn")
+const ARC = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskShockArc.tscn")
 
 func init(originMonster, shotPos):
 	shock_at_monster(originMonster, originMonster, shotPos)

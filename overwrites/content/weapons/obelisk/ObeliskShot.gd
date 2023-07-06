@@ -1,4 +1,4 @@
-extends "res://content/weapons/obelisk/DamageManager.gd"
+extends "res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/DamageManager.gd"
 
 signal shotDown
 
@@ -19,17 +19,17 @@ var singleTarget := true
 var shot_type = ShotTypes.Explosion
 
 
-const EXPLOSION_GROUND = preload("res://content/shared/explosions/Explosion98.tscn")
-const EXPLOSION_AIR = preload("res://content/shared/explosions/Explosion97.tscn")
-const EXPLOSION_STUN = preload("res://content/shared/explosions/Explosion96.tscn")
-const EXPLOSION_SINGLE = preload("res://content/shared/explosions/Explosion95.tscn")
-const EXPLOSION_MARK = preload("res://content/shared/explosions/Explosion94.tscn")
-const LIGHTNING_DOWN = preload("res://content/weapons/obelisk/LightningDown.tscn")
-const MARK = preload("res://content/weapons/obelisk/Mark.tscn")
-const EXPLOSION_SNIPER = preload("res://content/shared/explosions/Explosion93.tscn")
+const EXPLOSION_GROUND = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/shared/explosions/Explosion98.tscn")
+const EXPLOSION_AIR = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/shared/explosions/Explosion97.tscn")
+const EXPLOSION_STUN = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/shared/explosions/Explosion96.tscn")
+const EXPLOSION_SINGLE = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/shared/explosions/Explosion95.tscn")
+const EXPLOSION_MARK = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/shared/explosions/Explosion94.tscn")
+const LIGHTNING_DOWN = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/LightningDown.tscn")
+const MARK = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/Mark.tscn")
+const EXPLOSION_SNIPER = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/shared/explosions/Explosion93.tscn")
 
-const SHOCK_MANAGER = preload("res://content/weapons/obelisk/ObeliskShockManager.tscn")
-const NUKE_ECHO = preload("res://content/weapons/obelisk/DecayStunDoT.tscn")
+const SHOCK_MANAGER = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskShockManager.tscn")
+const NUKE_ECHO = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/DecayStunDoT.tscn")
 
 var hitMonsters := []
 var physics_passed := false

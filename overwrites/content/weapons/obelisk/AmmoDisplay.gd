@@ -1,6 +1,6 @@
 extends Node2D
 
-const AMMO_SINGLE = preload("res://content/weapons/obelisk/AmmoDisplaySingle.tscn")
+const AMMO_SINGLE = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/AmmoDisplaySingle.tscn")
 
 var maxAmmo = 12
 

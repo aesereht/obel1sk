@@ -13,7 +13,7 @@ var cur_reticleArcDelay := reticleArcDelay * 0.75
 var blockers = 1
 var ended = false
 
-const PULSE = preload("res://content/weapons/obelisk/KillstreakEffectPulse.tscn")
+const PULSE = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/KillstreakEffectPulse.tscn")
 
 func init():
 	radius = Data.of("obelisk.killstreakEffectRadius")

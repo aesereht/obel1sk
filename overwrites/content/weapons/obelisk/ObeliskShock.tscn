@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://content/weapons/obelisk/ObeliskShock.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskShock.gd" type="Script" id=1]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 56.0

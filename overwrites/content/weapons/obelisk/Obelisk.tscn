@@ -1,57 +1,41 @@
 [gd_scene load_steps=45 format=2]
 
-[ext_resource path="res://content/weapons/obelisk/Obelisk.gd" type="Script" id=1]
-[ext_resource path="res://content/gadgets/obelisk/obelisk.png" type="Texture" id=2]
-[ext_resource path="res://content/weapons/obelisk/Reticle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/Obelisk.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/obelisk.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/Reticle.tscn" type="PackedScene" id=3]
 [ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_02.wav" type="AudioStream" id=4]
-[ext_resource path="res://content/weapons/obelisk/ObeliskLightning.tscn" type="PackedScene" id=5]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskLightning.tscn" type="PackedScene" id=5]
 [ext_resource path="res://content/sounds/Weapons/obelisk/lightning_up.wav" type="AudioStream" id=6]
 [ext_resource path="res://content/sounds/Weapons/obelisk/_loo.wav" type="AudioStream" id=7]
 [ext_resource path="res://content/sounds/Weapons/obelisk/reload_finish2.wav" type="AudioStream" id=8]
 [ext_resource path="res://content/sounds/Weapons/obelisk/weapon_stop.wav" type="AudioStream" id=9]
 [ext_resource path="res://content/sounds/Weapons/obelisk/weapon_start.wav" type="AudioStream" id=10]
 [ext_resource path="res://content/sounds/Weapons/obelisk/reload_start.wav" type="AudioStream" id=11]
-[ext_resource path="res://content/weapons/obelisk/MercilessTracker.tscn" type="PackedScene" id=12]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/MercilessTracker.tscn" type="PackedScene" id=12]
 [ext_resource path="res://systems/audio/Sound.tscn" type="PackedScene" id=13]
 [ext_resource path="res://content/sounds/Weapons/obelisk/reload.wav" type="AudioStream" id=14]
-[ext_resource path="res://content/weapons/obelisk/QuickReload.tscn" type="PackedScene" id=15]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/QuickReload.tscn" type="PackedScene" id=15]
 [ext_resource path="res://content/sounds/Weapons/obelisk/Head_GUNFACE.wav" type="AudioStream" id=16]
 [ext_resource path="res://content/sounds/Weapons/obelisk/quick_fail.wav" type="AudioStream" id=17]
-[ext_resource path="res://content/weapons/obelisk/AmmoDisplay.tscn" type="PackedScene" id=18]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/AmmoDisplay.tscn" type="PackedScene" id=18]
 [ext_resource path="res://content/sounds/Weapons/obelisk/pure lil_4.wav" type="AudioStream" id=19]
 [ext_resource path="res://content/weapons/obelisk/img/allcolors.PNG" type="Texture" id=20]
-[ext_resource path="res://content/weapons/obelisk/BonusDamageDisplay.tscn" type="PackedScene" id=21]
-[ext_resource path="res://content/weapons/obelisk/MarkCounter.tscn" type="PackedScene" id=22]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/BonusDamageDisplay.tscn" type="PackedScene" id=21]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/MarkCounter.tscn" type="PackedScene" id=22]
 [ext_resource path="res://content/sounds/Weapons/obelisk/detonate_marks.wav" type="AudioStream" id=23]
-[ext_resource path="res://content/weapons/obelisk/ObeliskShockArc.tscn" type="PackedScene" id=24]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskShockArc.tscn" type="PackedScene" id=24]
 [ext_resource path="res://content/sounds/Weapons/obelisk/ShotgunContinous_1.wav" type="AudioStream" id=25]
-[ext_resource path="res://content/weapons/obelisk/KillstreakTracker.tscn" type="PackedScene" id=26]
-[ext_resource path="res://content/weapons/obelisk/img/outlineLineTexture.png" type="Texture" id=27]
-[ext_resource path="res://content/weapons/obelisk/DeathCandleArea.gd" type="Script" id=28]
-[ext_resource path="res://content/weapons/obelisk/img/autoAimActive.png" type="Texture" id=29]
-[ext_resource path="res://content/weapons/obelisk/img/autoAimInctive.png" type="Texture" id=30]
-[ext_resource path="res://content/weapons/obelisk/StoredDamage.tscn" type="PackedScene" id=31]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/KillstreakTracker.tscn" type="PackedScene" id=26]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/outlineLineTexture.png" type="Texture" id=27]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/DeathCandleArea.gd" type="Script" id=28]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/autoAimActive.png" type="Texture" id=29]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/autoAimInctive.png" type="Texture" id=30]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/StoredDamage.tscn" type="PackedScene" id=31]
 [ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_01.wav" type="AudioStream" id=32]
 [ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_03.wav" type="AudioStream" id=33]
 [ext_resource path="res://content/sounds/Weapons/obelisk/obelisk_overheat.wav" type="AudioStream" id=34]
 
 [sub_resource type="CapsuleShape2D" id=1]
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 30 )
-region = Rect2( 0, 0, 18, 18 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 30 )
-region = Rect2( 18, 0, 18, 18 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 30 )
-region = Rect2( 36, 0, 18, 18 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 30 )
-region = Rect2( 54, 0, 18, 18 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 29 )
@@ -69,16 +53,32 @@ region = Rect2( 36, 0, 18, 18 )
 atlas = ExtResource( 29 )
 region = Rect2( 54, 0, 18, 18 )
 
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 30 )
+region = Rect2( 0, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 30 )
+region = Rect2( 18, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 30 )
+region = Rect2( 36, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 30 )
+region = Rect2( 54, 0, 18, 18 )
+
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
-"loop": true,
-"name": "inactive",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
 "name": "active",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "inactive",
 "speed": 5.0
 } ]
 

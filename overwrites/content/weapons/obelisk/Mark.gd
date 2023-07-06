@@ -1,4 +1,4 @@
-extends "res://content/weapons/obelisk/MonsterFollower.gd"
+extends "res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/MonsterFollower.gd"
 
 
 func _ready() -> void:

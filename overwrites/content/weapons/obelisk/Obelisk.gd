@@ -1,7 +1,7 @@
 extends Node2D
 
-const SHOT = preload("res://content/weapons/obelisk/ObeliskShot.tscn")
-const BEAM = preload("res://content/weapons/obelisk/ObeliskBeam.tscn")
+const SHOT = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskShot.tscn")
+const BEAM = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskBeam.tscn")
 # stats
 var maxAmmo := 1
 # minQuickReload: range [0,1]
@@ -97,12 +97,12 @@ enum ControlModes{
 }
 export (ControlModes) var control_mode = ControlModes.Keyboard
 var reticle_target : ReticleTarget = null
-const RETICLE_TARGET = preload("res://content/weapons/obelisk/ReticleTarget.tscn")
-const LIGHTNING_UP = preload("res://content/weapons/obelisk/LightningUp.tscn")
-const ARC = preload("res://content/weapons/obelisk/ObeliskShockArc.tscn")
-const KILLSTREAK = preload("res://content/weapons/obelisk/KillstreakEffect.tscn")
-const RAD_AREA = preload("res://content/weapons/obelisk/RadiationApplyArea.tscn")
-const DEATH_CANDLE = preload("res://content/weapons/obelisk/DeathCandle.tscn")
+const RETICLE_TARGET = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ReticleTarget.tscn")
+const LIGHTNING_UP = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/LightningUp.tscn")
+const ARC = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskShockArc.tscn")
+const KILLSTREAK = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/KillstreakEffect.tscn")
+const RAD_AREA = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/RadiationApplyArea.tscn")
+const DEATH_CANDLE = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/DeathCandle.tscn")
 
 var killstreak_effects := []
 
@@ -1035,7 +1035,7 @@ func arc_from_shot(shotPosition:Vector2):
 		
 		printt(ratio, origin, target, dir, length, posOnArc)
 		
-		var n = preload("res://content/weapons/obelisk/DeathCandle.tscn").instance()
+		var n = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/DeathCandle.tscn").instance()
 		$DeathCandleArea.add_child(n)
 		n.position = posOnArc
 		n.init()

@@ -1,9 +1,10 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://content/weapons/obelisk/img/hitMarker3.png" type="Texture" id=1]
-[ext_resource path="res://content/weapons/obelisk/ReticleMarker.gd" type="Script" id=2]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/hitMarker3.png" type="Texture" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ReticleMarker.gd" type="Script" id=2]
 [ext_resource path="res://content/sounds/Weapons/obelisk/hit.wav" type="AudioStream" id=3]
 [ext_resource path="res://systems/audio/Sound.tscn" type="PackedScene" id=4]
+
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 1 )

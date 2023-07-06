@@ -1,12 +1,13 @@
 [gd_scene load_steps=31 format=2]
 
-[ext_resource path="res://content/weapons/obelisk/BonusDamageDisplay.gd" type="Script" id=1]
-[ext_resource path="res://content/weapons/obelisk/img/bonusDamageDisplay.png" type="Texture" id=2]
-[ext_resource path="res://content/weapons/obelisk/img/bonusDamageDisplayBlink1.png" type="Texture" id=3]
-[ext_resource path="res://content/weapons/obelisk/img/bonusDamageDisplayBlink0.png" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/BonusDamageDisplay.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/bonusDamageDisplay.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/bonusDamageDisplayBlink1.png" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/bonusDamageDisplayBlink0.png" type="Texture" id=4]
 [ext_resource path="res://content/sounds/Weapons/obelisk/reload_finish.wav" type="AudioStream" id=5]
 [ext_resource path="res://content/sounds/Weapons/obelisk/reload_static.wav" type="AudioStream" id=6]
 [ext_resource path="res://systems/audio/Sound.tscn" type="PackedScene" id=7]
+
 
 [sub_resource type="SpriteFrames" id=23]
 animations = [ {

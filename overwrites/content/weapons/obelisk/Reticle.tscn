@@ -1,38 +1,14 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://content/weapons/obelisk/Reticle.gd" type="Script" id=1]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsSniper_no.png" type="Texture" id=2]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsDefault_no.png" type="Texture" id=3]
-[ext_resource path="res://content/weapons/obelisk/img/hitMarker3TH.png" type="Texture" id=4]
-[ext_resource path="res://content/weapons/obelisk/img/denialVFX.png" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/Reticle.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/hitMarker3TH.png" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/denialVFX.png" type="Texture" id=5]
 [ext_resource path="res://systems/audio/Sound.tscn" type="PackedScene" id=6]
 [ext_resource path="res://content/sounds/Weapons/obelisk/tiles_04.wav" type="AudioStream" id=7]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsDefault_hover.png" type="Texture" id=8]
-[ext_resource path="res://content/weapons/obelisk/ReticleSegment.tscn" type="PackedScene" id=9]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsSniper_hover.png" type="Texture" id=10]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsSniperAux_no.png" type="Texture" id=11]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsSniperAux_hover.png" type="Texture" id=12]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsNuke_hover.png" type="Texture" id=13]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsNukeAux_no.png" type="Texture" id=14]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsSniperAux_reload.png" type="Texture" id=15]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsSniper_reload.png" type="Texture" id=16]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsDefault_reload.png" type="Texture" id=17]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsNuke_reload.png" type="Texture" id=18]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsNuke_no.png" type="Texture" id=19]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsNukeAux_hover.png" type="Texture" id=20]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsNukeAux_reload.png" type="Texture" id=21]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsFullAuto_reload.png" type="Texture" id=22]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsFullAuto_no.png" type="Texture" id=23]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsFullAuto_hover.png" type="Texture" id=24]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsBeamNarrow_noL.png" type="Texture" id=25]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsBeamNarrow_noR.png" type="Texture" id=26]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsBeamNarrow_hoverR.png" type="Texture" id=27]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsBeamNarrow_hoverL.png" type="Texture" id=28]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsBeamNarrow_reloadR.png" type="Texture" id=29]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsBeamNarrow_reloadL.png" type="Texture" id=30]
-[ext_resource path="res://content/weapons/obelisk/FAPoint.gd" type="Script" id=31]
-[ext_resource path="res://content/weapons/obelisk/img/crosshairsFACircle_hover.png" type="Texture" id=32]
-[ext_resource path="res://content/weapons/obelisk/img/outlineLineTexture.png" type="Texture" id=33]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ReticleSegment.tscn" type="PackedScene" id=9]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/FAPoint.gd" type="Script" id=31]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/crosshairsFACircle_hover.png" type="Texture" id=32]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/outlineLineTexture.png" type="Texture" id=33]
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 1.0
@@ -75,172 +51,57 @@ script = ExtResource( 1 )
 [node name="DefaultContainer" type="Node2D" parent="."]
 
 [node name="ReticleL" parent="DefaultContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 3 )
-textureHover = ExtResource( 8 )
-textureReload = ExtResource( 17 )
-dir = Vector2( -1, 0 )
 
 [node name="ReticleR" parent="DefaultContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 3 )
-textureHover = ExtResource( 8 )
-textureReload = ExtResource( 17 )
-dir = Vector2( 1, 0 )
 
 [node name="ReticleD" parent="DefaultContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 3 )
-textureHover = ExtResource( 8 )
-textureReload = ExtResource( 17 )
-dir = Vector2( 0, 1 )
 
 [node name="ReticleU" parent="DefaultContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 3 )
-textureHover = ExtResource( 8 )
-textureReload = ExtResource( 17 )
-dir = Vector2( 0, -1 )
 
 [node name="FullAutoContainer" type="Node2D" parent="."]
 
 [node name="ReticleD" parent="FullAutoContainer" instance=ExtResource( 9 )]
 position = Vector2( 0.05, 0 )
-textureNormal = ExtResource( 23 )
-textureHover = ExtResource( 24 )
-textureReload = ExtResource( 22 )
-dir = Vector2( 0, 1 )
 
 [node name="ReticleU" parent="FullAutoContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 23 )
-textureHover = ExtResource( 24 )
-textureReload = ExtResource( 22 )
-dir = Vector2( 0, -1 )
 
 [node name="ReticleL" parent="FullAutoContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 23 )
-textureHover = ExtResource( 24 )
-textureReload = ExtResource( 22 )
-dir = Vector2( -1, 0 )
-rotateToDir = false
-flipToDir = true
 
 [node name="ReticleR" parent="FullAutoContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 23 )
-textureHover = ExtResource( 24 )
-textureReload = ExtResource( 22 )
-dir = Vector2( 1, 0 )
-rotateToDir = false
-flipToDir = true
 
 [node name="SniperContainer" type="Node2D" parent="."]
 
 [node name="ReticleL" parent="SniperContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 2 )
-textureHover = ExtResource( 10 )
-textureReload = ExtResource( 16 )
-dir = Vector2( -1, 0 )
 
 [node name="ReticleR" parent="SniperContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 2 )
-textureHover = ExtResource( 10 )
-textureReload = ExtResource( 16 )
-dir = Vector2( 1, 0 )
 
 [node name="ReticleTR" parent="SniperContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 11 )
-textureHover = ExtResource( 12 )
-textureReload = ExtResource( 15 )
-dir = Vector2( 0.5, -0.5 )
-rotateToDir = false
-flipToDir = true
 
 [node name="ReticleBR" parent="SniperContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 11 )
-textureHover = ExtResource( 12 )
-textureReload = ExtResource( 15 )
-dir = Vector2( 0.5, 0.5 )
-rotateToDir = false
-flipToDir = true
 
 [node name="ReticleBL" parent="SniperContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 11 )
-textureHover = ExtResource( 12 )
-textureReload = ExtResource( 15 )
-dir = Vector2( -0.5, 0.5 )
-rotateToDir = false
-flipToDir = true
 
 [node name="ReticleTL" parent="SniperContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 11 )
-textureHover = ExtResource( 12 )
-textureReload = ExtResource( 15 )
-dir = Vector2( -0.5, -0.5 )
-rotateToDir = false
-flipToDir = true
 
 [node name="NukeContainer" type="Node2D" parent="."]
 
 [node name="ReticleTR" parent="NukeContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 14 )
-textureHover = ExtResource( 20 )
-textureReload = ExtResource( 21 )
-dir = Vector2( 0.5, -0.5 )
-rotateToDir = false
-flipToDir = true
 
 [node name="ReticleBR" parent="NukeContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 14 )
-textureHover = ExtResource( 20 )
-textureReload = ExtResource( 21 )
-dir = Vector2( 0.5, 0.5 )
-rotateToDir = false
-flipToDir = true
 
 [node name="ReticleBL" parent="NukeContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 14 )
-textureHover = ExtResource( 20 )
-textureReload = ExtResource( 21 )
-dir = Vector2( -0.5, 0.5 )
-rotateToDir = false
-flipToDir = true
 
 [node name="ReticleTL" parent="NukeContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 14 )
-textureHover = ExtResource( 20 )
-textureReload = ExtResource( 21 )
-dir = Vector2( -0.5, -0.5 )
-rotateToDir = false
-flipToDir = true
 
 [node name="ReticleL" parent="NukeContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 19 )
-textureHover = ExtResource( 13 )
-textureReload = ExtResource( 18 )
-dir = Vector2( -1, 0 )
-rotateToDir = false
-flipToDir = true
 
 [node name="ReticleR" parent="NukeContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 19 )
-textureHover = ExtResource( 13 )
-textureReload = ExtResource( 18 )
-dir = Vector2( 1, 0 )
-rotateToDir = false
-flipToDir = true
 
 [node name="BeamContainer" type="Node2D" parent="."]
 
 [node name="ReticleSegment" parent="BeamContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 25 )
-textureHover = ExtResource( 28 )
-textureReload = ExtResource( 30 )
-dir = Vector2( -1, 0 )
-rotateToDir = false
-flipToDir = true
 
 [node name="ReticleSegment2" parent="BeamContainer" instance=ExtResource( 9 )]
-textureNormal = ExtResource( 26 )
-textureHover = ExtResource( 27 )
-textureReload = ExtResource( 29 )
-dir = Vector2( 1, 0 )
-rotateToDir = false
 
 [node name="FullAutoCircle" type="Line2D" parent="."]
 width = 1.75

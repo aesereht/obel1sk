@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://content/weapons/obelisk/Mark.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/Mark.gd" type="Script" id=1]
 [ext_resource path="res://content/weapons/obelisk/img/markSheet2.png" type="Texture" id=2]
 
 [sub_resource type="AtlasTexture" id=5]

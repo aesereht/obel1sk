@@ -3,7 +3,7 @@ domeobel1sk:
   propertyChanges: 
     - dome.maxhealth = 800
     - dome.meleedamageReduction = 0.0/h
-  primaryWeapon: obelisk
+  primaryWeapon: obel1sk
 domeobel1skHealthMeter:
   limit: [hostile]
   cost: iron=1
@@ -53,375 +53,375 @@ domeobel1skMaxRestore:
 
 
 
-obelisk:
+obel1sk:
   limit: [hostile]
   propertyChanges:
-    - obelisk.chStyle = 0/h
-    - obelisk.adStyle = 0/h
-    - obelisk.arcDirectlyToShot = true/h
-    - obelisk.attackType = 0/h
-    - obelisk.shotType = 0/h
-    - obelisk.specialType = 0/h
-    - obelisk.ammoUsage = 0/h
-    - obelisk.markMax = 3/h
-    - obelisk.markCurrent = 0/h
+    - obel1sk.chStyle = 0/h
+    - obel1sk.adStyle = 0/h
+    - obel1sk.arcDirectlyToShot = true/h
+    - obel1sk.attackType = 0/h
+    - obel1sk.shotType = 0/h
+    - obel1sk.specialType = 0/h
+    - obel1sk.ammoUsage = 0/h
+    - obel1sk.markMax = 3/h
+    - obel1sk.markCurrent = 0/h
 
-    - obelisk.maxReticleSpeed = 2.0
-    - obelisk.damage = 30
-    - obelisk.radius = 25
-    - obelisk.damageMult = 1.0/h
-    - obelisk.stun = 8.0/h
-    - obelisk.shootDelay = 1.35
-    - obelisk.shootDelayReduction = 0.0/h
-    - obelisk.maxShootDelayReduction = 0.0/h
-    - obelisk.burstDelay = 0.0/h
-    - obelisk.singleTarget = false/h
-    - obelisk.stunRadius = 1.0/h
-    - obelisk.markDetonationRadius = 45
-    - obelisk.nukeEchoDps = 0.0/h
-    - obelisk.explosionDelay = 0.0/h
-    - obelisk.beamRadianceMult = 0.0/h
-    - obelisk.beamWidth = 0.0/h
-    - obelisk.beamRadianceWidth = 0.0/h
-    - obelisk.maxRestDamageMult = 0.0/h
-    - obelisk.fullRestDamageAdd = 0.0/h
-    - obelisk.restDamageDecayMult = 1.0/h
-    - obelisk.arcRange = 0.0/h
-    - obelisk.arcStun = 0.0/h
-    - obelisk.arcDamage = 0.0/h
-    - obelisk.arcDamagePerMonster = 0.0/h
-    - obelisk.arcDuration = 0.0/h
-    - obelisk.arcCooldown = 0.0/h
+    - obel1sk.maxReticleSpeed = 2.0
+    - obel1sk.damage = 30
+    - obel1sk.radius = 25
+    - obel1sk.damageMult = 1.0/h
+    - obel1sk.stun = 8.0/h
+    - obel1sk.shootDelay = 1.35
+    - obel1sk.shootDelayReduction = 0.0/h
+    - obel1sk.maxShootDelayReduction = 0.0/h
+    - obel1sk.burstDelay = 0.0/h
+    - obel1sk.singleTarget = false/h
+    - obel1sk.stunRadius = 1.0/h
+    - obel1sk.markDetonationRadius = 45
+    - obel1sk.nukeEchoDps = 0.0/h
+    - obel1sk.explosionDelay = 0.0/h
+    - obel1sk.beamRadianceMult = 0.0/h
+    - obel1sk.beamWidth = 0.0/h
+    - obel1sk.beamRadianceWidth = 0.0/h
+    - obel1sk.maxRestDamageMult = 0.0/h
+    - obel1sk.fullRestDamageAdd = 0.0/h
+    - obel1sk.restDamageDecayMult = 1.0/h
+    - obel1sk.arcRange = 0.0/h
+    - obel1sk.arcStun = 0.0/h
+    - obel1sk.arcDamage = 0.0/h
+    - obel1sk.arcDamagePerMonster = 0.0/h
+    - obel1sk.arcDuration = 0.0/h
+    - obel1sk.arcCooldown = 0.0/h
 
-    - obelisk.maxAmmo = 6/h
-    - obelisk.burstCount = 1/h
-    - obelisk.fullAuto = true/h
-    - obelisk.autoReload = true/h
-    - obelisk.enterAutoReloadOnLastAmmo = true/h
-    - obelisk.allowManualReloadStart = true/h
-    - obelisk.allowReload = true/h
-    - obelisk.rechargeAmmo = false/h
-    - obelisk.batteryDelay = 0.0/h
-    - obelisk.speedWhileReloading = 0.5/h
-    - obelisk.speedWhileNoAmmo = 1.0/h
-    - obelisk.speedWhileShooting = 1.0/h
-    - obelisk.speedWhileSpecialSlow = 1.0/h
-    - obelisk.reloadTime = 3.3/h
-    - obelisk.reloadTimeReduction = 0.0/h
-    - obelisk.reloadTimeMult = 1.0/h
-    - obelisk.minQuickReload = 0.25/h
-    - obelisk.maxQuickReload = 0.65/h
-    - obelisk.maxQuickReloadWindow = 0.0/h
-    - obelisk.shootingSpreadMax = 40.0/h
-    - obelisk.shootingSpreadGrowth = 10.0/h
-    - obelisk.shootingSpreadDecay = 2.6/h
-    - obelisk.guaranteedCenterShotThreshold = 8.0/h
-    - obelisk.slowMark = 0.0/h
-    - obelisk.markBonusDamagePerMonster = 0.0/h
+    - obel1sk.maxAmmo = 6/h
+    - obel1sk.burstCount = 1/h
+    - obel1sk.fullAuto = true/h
+    - obel1sk.autoReload = true/h
+    - obel1sk.enterAutoReloadOnLastAmmo = true/h
+    - obel1sk.allowManualReloadStart = true/h
+    - obel1sk.allowReload = true/h
+    - obel1sk.rechargeAmmo = false/h
+    - obel1sk.batteryDelay = 0.0/h
+    - obel1sk.speedWhileReloading = 0.5/h
+    - obel1sk.speedWhileNoAmmo = 1.0/h
+    - obel1sk.speedWhileShooting = 1.0/h
+    - obel1sk.speedWhileSpecialSlow = 1.0/h
+    - obel1sk.reloadTime = 3.3/h
+    - obel1sk.reloadTimeReduction = 0.0/h
+    - obel1sk.reloadTimeMult = 1.0/h
+    - obel1sk.minQuickReload = 0.25/h
+    - obel1sk.maxQuickReload = 0.65/h
+    - obel1sk.maxQuickReloadWindow = 0.0/h
+    - obel1sk.shootingSpreadMax = 40.0/h
+    - obel1sk.shootingSpreadGrowth = 10.0/h
+    - obel1sk.shootingSpreadDecay = 2.6/h
+    - obel1sk.guaranteedCenterShotThreshold = 8.0/h
+    - obel1sk.slowMark = 0.0/h
+    - obel1sk.markBonusDamagePerMonster = 0.0/h
     
-    - obelisk.minReticleSpread = 5.0/h
-    - obelisk.maxReticleSpread = 15.0
-    - obelisk.spreadUpSpeed = 0.03/h
-    - obelisk.spreadDownSpeed = 0.05/h
-    - obelisk.slowdownOverMonsters = 1.0/h
-    - obelisk.monsterSlowdownBridgeTime = 0.15/h
-    - obelisk.detectionRadius = 15/h
-    - obelisk.radiusOutline = false/h
-    - obelisk.killstreaks = false/h
-    - obelisk.killstreakEffectRadius = 0/h
-    - obelisk.killstreakEffectStaticDamage = 0/h
-    - obelisk.killstreakEffectPulseDamage = 0/h
-    - obelisk.killstreakEffectPulseDelay = 0.0/h
-    - obelisk.killstreakGoal = 150
-    - obelisk.killstreakActiveDuration = 0.0/h
-    - obelisk.killstreakActiveReticleSpeedAdd = 0.0/h
-    - obelisk.killstreakActiveReloadMultiplier = 1.0/h
-    - obelisk.killstreakActiveShootDelayMultiplier = 1.0/h
-    - obelisk.killstreakActiveNoSpread = false/h
-    - obelisk.killstreakActiveFullSpeed = false/h
-    - obelisk.killstreakInactiveEffects = false/h
-    - obelisk.killstreakInactiveSpeed = 1.0/h
-    - obelisk.killstreakInactiveDamage = 1.0/h
-    - obelisk.killstreakGHFthreshold = 0.0/h
-    - obelisk.killstreakChargeWithDamage = false/h
-    - obelisk.killstreakChargeWithDamageDelayMult = 1.0/h
-    - obelisk.killstreakChargeWithDamageDecayMult = 1.0/h
-    - obelisk.killstreakActiveEffects = false/h
+    - obel1sk.minReticleSpread = 5.0/h
+    - obel1sk.maxReticleSpread = 15.0
+    - obel1sk.spreadUpSpeed = 0.03/h
+    - obel1sk.spreadDownSpeed = 0.05/h
+    - obel1sk.slowdownOverMonsters = 1.0/h
+    - obel1sk.monsterSlowdownBridgeTime = 0.15/h
+    - obel1sk.detectionRadius = 15/h
+    - obel1sk.radiusOutline = false/h
+    - obel1sk.killstreaks = false/h
+    - obel1sk.killstreakEffectRadius = 0/h
+    - obel1sk.killstreakEffectStaticDamage = 0/h
+    - obel1sk.killstreakEffectPulseDamage = 0/h
+    - obel1sk.killstreakEffectPulseDelay = 0.0/h
+    - obel1sk.killstreakGoal = 150
+    - obel1sk.killstreakActiveDuration = 0.0/h
+    - obel1sk.killstreakActiveReticleSpeedAdd = 0.0/h
+    - obel1sk.killstreakActiveReloadMultiplier = 1.0/h
+    - obel1sk.killstreakActiveShootDelayMultiplier = 1.0/h
+    - obel1sk.killstreakActiveNoSpread = false/h
+    - obel1sk.killstreakActiveFullSpeed = false/h
+    - obel1sk.killstreakInactiveEffects = false/h
+    - obel1sk.killstreakInactiveSpeed = 1.0/h
+    - obel1sk.killstreakInactiveDamage = 1.0/h
+    - obel1sk.killstreakGHFthreshold = 0.0/h
+    - obel1sk.killstreakChargeWithDamage = false/h
+    - obel1sk.killstreakChargeWithDamageDelayMult = 1.0/h
+    - obel1sk.killstreakChargeWithDamageDecayMult = 1.0/h
+    - obel1sk.killstreakActiveEffects = false/h
 
-    - obelisk.ammoRefillOnKill = 0.0/h
-    - obelisk.spreadLossOnKill = false/h
-    - obelisk.spreadLossOnKillDuration = 0.0/h
-    - obelisk.mercilessGain = 0/h
-    - obelisk.mercilessMax = 0/h
-    - obelisk.mercilessBase = 0/h
-    - obelisk.mercilessThreshold = 0/h
-    - obelisk.mercilessFullLossDelay = 0.0/h
-    - obelisk.mercilessLossRate = 0.0/h
-    - obelisk.mercilessDamageEfficiency = 0.0/h
-    - obelisk.mercilessSpeedEfficiency = 0.0/h
-    - obelisk.mercilessGainOnDamage = false/h
-    - obelisk.reticleSpeedAddOnShoot = 0.0/h
-    - obelisk.reticleSpeedAddOnShootDuration = 0.0/h
-    - obelisk.spreadRadiationOnDeath = false/h
-    - obelisk.mercilessThresholdShootDelayMultiplier = 1.0/h
-    - obelisk.mercilessThresholdReloadMultiplier = 1.0/h
-    - obelisk.mercilessThresholdNoSpread = false/h
-    - obelisk.deathCandles = false/h
-    - obelisk.deathCandleMinDuration = 0.0/h
-    - obelisk.deathCandleMaxDuration = 0.0/h
-    - obelisk.anticipationOutline = false
-    - obelisk.arcInitialDamage = 0/h
-    - obelisk.shotsAlongArc = 0/h
-    - obelisk.shootDelayReductionIncrease = 0.04/h
-    - obelisk.spreadDecreaseOnHit = 0/h
-    - obelisk.piercingBeam = false
-    - obelisk.autoAimDuration = 0.0/h
-    - obelisk.stunAlongArc = 0
-    - obelisk.lastShotDamageMult = 0.0/h
-    - obelisk.reticleSpreadAdd = 0/h
-    - obelisk.storedDamageMax = 0/h
-    - obelisk.emptyReloadTimeMult = 1.0/h
+    - obel1sk.ammoRefillOnKill = 0.0/h
+    - obel1sk.spreadLossOnKill = false/h
+    - obel1sk.spreadLossOnKillDuration = 0.0/h
+    - obel1sk.mercilessGain = 0/h
+    - obel1sk.mercilessMax = 0/h
+    - obel1sk.mercilessBase = 0/h
+    - obel1sk.mercilessThreshold = 0/h
+    - obel1sk.mercilessFullLossDelay = 0.0/h
+    - obel1sk.mercilessLossRate = 0.0/h
+    - obel1sk.mercilessDamageEfficiency = 0.0/h
+    - obel1sk.mercilessSpeedEfficiency = 0.0/h
+    - obel1sk.mercilessGainOnDamage = false/h
+    - obel1sk.reticleSpeedAddOnShoot = 0.0/h
+    - obel1sk.reticleSpeedAddOnShootDuration = 0.0/h
+    - obel1sk.spreadRadiationOnDeath = false/h
+    - obel1sk.mercilessThresholdShootDelayMultiplier = 1.0/h
+    - obel1sk.mercilessThresholdReloadMultiplier = 1.0/h
+    - obel1sk.mercilessThresholdNoSpread = false/h
+    - obel1sk.deathCandles = false/h
+    - obel1sk.deathCandleMinDuration = 0.0/h
+    - obel1sk.deathCandleMaxDuration = 0.0/h
+    - obel1sk.anticipationOutline = false
+    - obel1sk.arcInitialDamage = 0/h
+    - obel1sk.shotsAlongArc = 0/h
+    - obel1sk.shootDelayReductionIncrease = 0.04/h
+    - obel1sk.spreadDecreaseOnHit = 0/h
+    - obel1sk.piercingBeam = false
+    - obel1sk.autoAimDuration = 0.0/h
+    - obel1sk.stunAlongArc = 0
+    - obel1sk.lastShotDamageMult = 0.0/h
+    - obel1sk.reticleSpreadAdd = 0/h
+    - obel1sk.storedDamageMax = 0/h
+    - obel1sk.emptyReloadTimeMult = 1.0/h
     
-    - obelisk.lightningXRatio = 0.11/h
-    - obelisk.lightningYTarget = -1000/h
-obeliskSpeed1:
+    - obel1sk.lightningXRatio = 0.11/h
+    - obel1sk.lightningYTarget = -1000/h
+obel1skSpeed1:
   cost: iron=6
   propertyChanges: 
-    - obelisk.maxReticleSpeed += 0.9
-  predecessors: [obelisk]
-obeliskSpeed2:
+    - obel1sk.maxReticleSpeed += 0.9
+  predecessors: [obel1sk]
+obel1skSpeed2:
   cost: iron=16
   propertyChanges: 
-    - obelisk.maxReticleSpeed += 1.2
-  predecessors: [obeliskSpeed1]
-obeliskSlowDamage:
+    - obel1sk.maxReticleSpeed += 1.2
+  predecessors: [obel1skSpeed1]
+obel1skSlowDamage:
   cost: iron=8
   propertyChanges:
-    - obelisk.maxReticleSpeed -= 0.35
-    - obelisk.damageMult += 1.0
-    - obelisk.reticleSpreadAdd = 30
-  predecessors: [obelisk]
-obeliskDamage:
+    - obel1sk.maxReticleSpeed -= 0.35
+    - obel1sk.damageMult += 1.0
+    - obel1sk.reticleSpreadAdd = 30
+  predecessors: [obel1sk]
+obel1skDamage:
   cost: iron=13
   propertyChanges:
-    - obelisk.damageMult += 1.25
-  predecessors: [obeliskDefault1]
-obeliskDefault1:
+    - obel1sk.damageMult += 1.25
+  predecessors: [obel1skDefault1]
+obel1skDefault1:
   cost: iron=10
   propertyChanges:
-    - obelisk.damage = 40
-    - obelisk.radius = 30
-    - obelisk.stun = 20.0/h
-  predecessors: [obelisk]
-  locks: [obeliskSpooling1]
-obeliskSpooling1:
+    - obel1sk.damage = 40
+    - obel1sk.radius = 30
+    - obel1sk.stun = 20.0/h
+  predecessors: [obel1sk]
+  locks: [obel1skSpooling1]
+obel1skSpooling1:
   cost: iron=10
   propertyChanges:
-    - obelisk.damage = 13
-    - obelisk.radius = 14
-    - obelisk.speedWhileShooting = 0.38
-    - obelisk.shootDelay = 0.45
-    - obelisk.minReticleSpread = 47.0/h
-    - obelisk.maxReticleSpread = 77.0/h
-    - obelisk.maxShootDelayReduction = 0.225
-    - obelisk.shootDelayReductionIncrease = 0.025
-    - obelisk.shootingSpreadMax = -35.0/h
-    - obelisk.shootingSpreadGrowth = -0.75/h
-    - obelisk.shootingSpreadDecay = 1.0/h
-    - obelisk.chStyle = 5/h
-  predecessors: [obelisk]
-  locks: [obeliskDefault1]
-obeliskDefault2:
+    - obel1sk.damage = 13
+    - obel1sk.radius = 14
+    - obel1sk.speedWhileShooting = 0.38
+    - obel1sk.shootDelay = 0.45
+    - obel1sk.minReticleSpread = 47.0/h
+    - obel1sk.maxReticleSpread = 77.0/h
+    - obel1sk.maxShootDelayReduction = 0.225
+    - obel1sk.shootDelayReductionIncrease = 0.025
+    - obel1sk.shootingSpreadMax = -35.0/h
+    - obel1sk.shootingSpreadGrowth = -0.75/h
+    - obel1sk.shootingSpreadDecay = 1.0/h
+    - obel1sk.chStyle = 5/h
+  predecessors: [obel1sk]
+  locks: [obel1skDefault1]
+obel1skDefault2:
   cost: iron=14
   propertyChanges:
-    - obelisk.maxReticleSpeed += 0.4
-    - obelisk.damage = 80
-    - obelisk.radius = 45
-    - obelisk.stun = 20.0/h
-    - obelisk.shootDelay = 1.5
-    - obelisk.maxAmmo = 4/h
-  locks: [obeliskSniper1]
-  predecessors: [obeliskDefault1]
-obeliskSniper1:
+    - obel1sk.maxReticleSpeed += 0.4
+    - obel1sk.damage = 80
+    - obel1sk.radius = 45
+    - obel1sk.stun = 20.0/h
+    - obel1sk.shootDelay = 1.5
+    - obel1sk.maxAmmo = 4/h
+  locks: [obel1skSniper1]
+  predecessors: [obel1skDefault1]
+obel1skSniper1:
   cost: iron=14
   propertyChanges:
-    - obelisk.maxReticleSpeed += 1.2
-    - obelisk.speedWhileSpecialSlow = 0.35/h
-    - obelisk.damage = 60
-    - obelisk.fullRestDamageAdd = 60
-    - obelisk.maxRestDamageMult = 4.0
-    - obelisk.radius = 7.0/h
-    - obelisk.singleTarget = true
-    - obelisk.fullAuto = false
-    - obelisk.specialType = 2/h
-    - obelisk.shootDelay = 0.05/h
-    - obelisk.maxAmmo = 5
-    - obelisk.ammoUsage = 1/h
-    - obelisk.rechargeAmmo = true/h
-    - obelisk.batteryDelay = 2.0/h
-    - obelisk.reloadTime = 2.5
-    - obelisk.chStyle = 1/h
-    - obelisk.maxReticleSpread = 57.0
-    - obelisk.shootingSpreadMax = 160.0/h
-    - obelisk.shootingSpreadGrowth = 3.14/h
-    - obelisk.spreadDownSpeed = 0.025/h
-    - obelisk.shootingSpreadDecay = 1.8/h
-    - obelisk.guaranteedCenterShotThreshold = 14.0/h
-    - obelisk.allowReload = true/h
-    - obelisk.enterAutoReloadOnLastAmmo = false/h
-    - obelisk.allowManualReloadStart = false/h
-  locks: [obeliskDefault2]
-  predecessors: [obeliskDefault1]
-obeliskNukes1:
+    - obel1sk.maxReticleSpeed += 1.2
+    - obel1sk.speedWhileSpecialSlow = 0.35/h
+    - obel1sk.damage = 60
+    - obel1sk.fullRestDamageAdd = 60
+    - obel1sk.maxRestDamageMult = 4.0
+    - obel1sk.radius = 7.0/h
+    - obel1sk.singleTarget = true
+    - obel1sk.fullAuto = false
+    - obel1sk.specialType = 2/h
+    - obel1sk.shootDelay = 0.05/h
+    - obel1sk.maxAmmo = 5
+    - obel1sk.ammoUsage = 1/h
+    - obel1sk.rechargeAmmo = true/h
+    - obel1sk.batteryDelay = 2.0/h
+    - obel1sk.reloadTime = 2.5
+    - obel1sk.chStyle = 1/h
+    - obel1sk.maxReticleSpread = 57.0
+    - obel1sk.shootingSpreadMax = 160.0/h
+    - obel1sk.shootingSpreadGrowth = 3.14/h
+    - obel1sk.spreadDownSpeed = 0.025/h
+    - obel1sk.shootingSpreadDecay = 1.8/h
+    - obel1sk.guaranteedCenterShotThreshold = 14.0/h
+    - obel1sk.allowReload = true/h
+    - obel1sk.enterAutoReloadOnLastAmmo = false/h
+    - obel1sk.allowManualReloadStart = false/h
+  locks: [obel1skDefault2]
+  predecessors: [obel1skDefault1]
+obel1skNukes1:
   cost: iron=14
   propertyChanges:
-    - obelisk.maxReticleSpeed -= 1.0
-    - obelisk.arcDirectlyToShot = false/h
-    - obelisk.damage = 80/h
-    - obelisk.nukeEchoDps = 14.0
-    - obelisk.radius = 60
-    - obelisk.fullAuto = false
-    - obelisk.stun = 50/h
-    - obelisk.shootDelay = 3.5
-    - obelisk.explosionDelay = 0.7
-    - obelisk.maxAmmo = 2/h
-    - obelisk.reloadTime = 7.0/h
-    - obelisk.maxReticleSpread = 5.0
-    - obelisk.shootingSpreadMax = 30.0/h
-    - obelisk.chStyle = 2/h
-    - obelisk.maxQuickReloadWindow += 1.0/h
-    - obelisk.shootingSpreadGrowth = 30.0/h
-    - obelisk.minReticleSpread = 5.0/h
-    - obelisk.anticipationOutline = true
-    - obelisk.reticleSpeedAddOnShoot = 2.5
-    - obelisk.reticleSpeedAddOnShootDuration = 0.75
-   predecessors: [obeliskDefault2]
-   locks: [obeliskBurst1]
-obeliskBurst1:
+    - obel1sk.maxReticleSpeed -= 1.0
+    - obel1sk.arcDirectlyToShot = false/h
+    - obel1sk.damage = 80/h
+    - obel1sk.nukeEchoDps = 14.0
+    - obel1sk.radius = 60
+    - obel1sk.fullAuto = false
+    - obel1sk.stun = 50/h
+    - obel1sk.shootDelay = 3.5
+    - obel1sk.explosionDelay = 0.7
+    - obel1sk.maxAmmo = 2/h
+    - obel1sk.reloadTime = 7.0/h
+    - obel1sk.maxReticleSpread = 5.0
+    - obel1sk.shootingSpreadMax = 30.0/h
+    - obel1sk.chStyle = 2/h
+    - obel1sk.maxQuickReloadWindow += 1.0/h
+    - obel1sk.shootingSpreadGrowth = 30.0/h
+    - obel1sk.minReticleSpread = 5.0/h
+    - obel1sk.anticipationOutline = true
+    - obel1sk.reticleSpeedAddOnShoot = 2.5
+    - obel1sk.reticleSpeedAddOnShootDuration = 0.75
+   predecessors: [obel1skDefault2]
+   locks: [obel1skBurst1]
+obel1skBurst1:
   cost: iron=14
   propertyChanges:
-    - obelisk.damage = 33
-    - obelisk.speedWhileShooting = 0.75
-    - obelisk.shootDelay = 1.5
-    - obelisk.burstCount = 3
-    - obelisk.burstDelay = 0.27
-    - obelisk.shootingSpreadMax = 80.0
-    - obelisk.shootingSpreadGrowth = 4.0/h
-    - obelisk.shootingSpreadDecay = 0.25/h
-  locks: [obeliskNukes1]
-  predecessors: [obeliskDefault2]
-obeliskNukes2:
+    - obel1sk.damage = 33
+    - obel1sk.speedWhileShooting = 0.75
+    - obel1sk.shootDelay = 1.5
+    - obel1sk.burstCount = 3
+    - obel1sk.burstDelay = 0.27
+    - obel1sk.shootingSpreadMax = 80.0
+    - obel1sk.shootingSpreadGrowth = 4.0/h
+    - obel1sk.shootingSpreadDecay = 0.25/h
+  locks: [obel1skNukes1]
+  predecessors: [obel1skDefault2]
+obel1skNukes2:
   cost: iron=20
   propertyChanges:
-    - obelisk.damage = 110
-    - obelisk.stunRadius = 4.0
-    - obelisk.explosionDelay = 1.6
-  predecessors: [obeliskNukes1]
-obeliskBurst2:
+    - obel1sk.damage = 110
+    - obel1sk.stunRadius = 4.0
+    - obel1sk.explosionDelay = 1.6
+  predecessors: [obel1skNukes1]
+obel1skBurst2:
   cost: iron=20
   propertyChanges:
-    - obelisk.spreadDecreaseOnHit = 30
-  predecessors: [obeliskBurst1]
-obeliskSniper2:
+    - obel1sk.spreadDecreaseOnHit = 30
+  predecessors: [obel1skBurst1]
+obel1skSniper2:
   cost: iron=20
   propertyChanges:
-    - obelisk.arcRange = 80.0/h
-    - obelisk.arcStun = 300.0/h
-    - obelisk.arcDamage = 0.0/h
-    - obelisk.arcDamagePerMonster = 0.0/h
-    - obelisk.arcDuration = 5.5
-    - obelisk.arcCooldown = 0.0/h
-    - obelisk.arcInitialDamage = 55
-  predecessors: [obeliskSniper1]
-obeliskAmmoKill:
+    - obel1sk.arcRange = 80.0/h
+    - obel1sk.arcStun = 300.0/h
+    - obel1sk.arcDamage = 0.0/h
+    - obel1sk.arcDamagePerMonster = 0.0/h
+    - obel1sk.arcDuration = 5.5
+    - obel1sk.arcCooldown = 0.0/h
+    - obel1sk.arcInitialDamage = 55
+  predecessors: [obel1skSniper1]
+obel1skAmmoKill:
   cost: iron=4
   propertyChanges:
-    - obelisk.ammoRefillOnKill = 0.2
-    - obelisk.lastShotDamageMult = 2.5
-  predecessors: [obeliskSniper1]
-obeliskSniper3:
+    - obel1sk.ammoRefillOnKill = 0.2
+    - obel1sk.lastShotDamageMult = 2.5
+  predecessors: [obel1skSniper1]
+obel1skSniper3:
   cost: iron=26
   propertyChanges:
-    - obelisk.spreadLossOnKill = true
-    - obelisk.spreadLossOnKillDuration = 2.5
-  locks: [obeliskSniperAutoAim]
-  predecessors: [obeliskSniper2, obeliskAmmoKill]
+    - obel1sk.spreadLossOnKill = true
+    - obel1sk.spreadLossOnKillDuration = 2.5
+  locks: [obel1skSniperAutoAim]
+  predecessors: [obel1skSniper2, obel1skAmmoKill]
   predecessorsAny: true
-obeliskSniperAutoAim:
+obel1skSniperAutoAim:
   cost: iron=10
   propertyChanges:
-    - obelisk.autoAimDuration = 10.0
-  locks: [obeliskSniper3]
-  predecessors: [obeliskSniper2, obeliskAmmoKill]
+    - obel1sk.autoAimDuration = 10.0
+  locks: [obel1skSniper3]
+  predecessors: [obel1skSniper2, obel1skAmmoKill]
   predecessorsAny: true
-obeliskSpooling2:
+obel1skSpooling2:
   cost: iron=10
   propertyChanges:
-    - obelisk.damage = 13/h
-    - obelisk.maxShootDelayReduction = 0.3
-    - obelisk.shootDelayReductionIncrease = 0.04
-  predecessors: [obeliskSpooling1]
-obeliskDamageRepeatable:
+    - obel1sk.damage = 13/h
+    - obel1sk.maxShootDelayReduction = 0.3
+    - obel1sk.shootDelayReductionIncrease = 0.04
+  predecessors: [obel1skSpooling1]
+obel1skDamageRepeatable:
   cost: iron=6
   propertyChanges:
-    - obelisk.damageMult += 0.15
+    - obel1sk.damageMult += 0.15
   repeatable:
     - cost.iron += 2
-  predecessors: [obeliskSpooling1]
-obeliskSpooling3:
+  predecessors: [obel1skSpooling1]
+obel1skSpooling3:
   cost: iron=16
   propertyChanges:
-    - obelisk.damage = 17
-    - obelisk.speedWhileShooting = 0.2
-    - obelisk.maxShootDelayReduction = 0.35
-    - obelisk.minReticleSpread = 60.0/h
-    - obelisk.maxReticleSpread = 90.0
-    - obelisk.shootingSpreadMax = -40.0/h
-    - obelisk.shootingSpreadGrowth = -2.0/h
-    - obelisk.shootingSpreadDecay = 2.0/h
-  locks: [obeliskBeam1]
-  predecessors: [obeliskSpooling2]
-obeliskStunArea:
+    - obel1sk.damage = 17
+    - obel1sk.speedWhileShooting = 0.2
+    - obel1sk.maxShootDelayReduction = 0.35
+    - obel1sk.minReticleSpread = 60.0/h
+    - obel1sk.maxReticleSpread = 90.0
+    - obel1sk.shootingSpreadMax = -40.0/h
+    - obel1sk.shootingSpreadGrowth = -2.0/h
+    - obel1sk.shootingSpreadDecay = 2.0/h
+  locks: [obel1skBeam1]
+  predecessors: [obel1skSpooling2]
+obel1skStunArea:
   cost: iron=10
   propertyChanges:
-    - obelisk.stunAlongArc = true
-  predecessors: [obeliskSpooling3]
-obeliskBeam1:
+    - obel1sk.stunAlongArc = true
+  predecessors: [obel1skSpooling3]
+obel1skBeam1:
   cost: iron=16
   propertyChanges:
-    - obelisk.adStyle = 1/h
-    - obelisk.arcDirectlyToShot = false/h
-    - obelisk.chStyle = 4/h
-    - obelisk.attackType = 1/h
-    - obelisk.shootingSpreadMax = -5.0/h
-    - obelisk.shootingSpreadGrowth = 0.75/h
-    - obelisk.damage = 60
-    - obelisk.beamRadianceMult = 0.333/h
-    - obelisk.beamWidth = 6.5/h
-    - obelisk.beamRadianceWidth = 19/h
-    - obelisk.stun = 200/h
-    - obelisk.maxAmmo = 80
-    - obelisk.ammoUsage = 1/h
-    - obelisk.minReticleSpread = 0.0/h
-    - obelisk.maxReticleSpread = 0.0/h
-    - obelisk.batteryDelay = 0.5/h
-    - obelisk.allowReload = true/h
-    - obelisk.reloadTime = 0.75/h
-    - obelisk.emptyReloadTimeMult = 8.0
-    - obelisk.rechargeAmmo = true/h
-    - obelisk.enterAutoReloadOnLastAmmo = false/h
-    - obelisk.allowManualReloadStart = false/h
-  predecessors: [obeliskSpooling2]
-  locks: [obeliskSpooling3]
-obeliskBeamPiercing:
+    - obel1sk.adStyle = 1/h
+    - obel1sk.arcDirectlyToShot = false/h
+    - obel1sk.chStyle = 4/h
+    - obel1sk.attackType = 1/h
+    - obel1sk.shootingSpreadMax = -5.0/h
+    - obel1sk.shootingSpreadGrowth = 0.75/h
+    - obel1sk.damage = 60
+    - obel1sk.beamRadianceMult = 0.333/h
+    - obel1sk.beamWidth = 6.5/h
+    - obel1sk.beamRadianceWidth = 19/h
+    - obel1sk.stun = 200/h
+    - obel1sk.maxAmmo = 80
+    - obel1sk.ammoUsage = 1/h
+    - obel1sk.minReticleSpread = 0.0/h
+    - obel1sk.maxReticleSpread = 0.0/h
+    - obel1sk.batteryDelay = 0.5/h
+    - obel1sk.allowReload = true/h
+    - obel1sk.reloadTime = 0.75/h
+    - obel1sk.emptyReloadTimeMult = 8.0
+    - obel1sk.rechargeAmmo = true/h
+    - obel1sk.enterAutoReloadOnLastAmmo = false/h
+    - obel1sk.allowManualReloadStart = false/h
+  predecessors: [obel1skSpooling2]
+  locks: [obel1skSpooling3]
+obel1skBeamPiercing:
   cost: iron=10
   propertyChanges:
-    - obelisk.piercingBeam = true
-    - obelisk.damage = 70
-    - obelisk.maxAmmo = 160
-  predecessors: [obeliskBeam1]
-obeliskStoreDamage:
+    - obel1sk.piercingBeam = true
+    - obel1sk.damage = 70
+    - obel1sk.maxAmmo = 160
+  predecessors: [obel1skBeam1]
+obel1skStoreDamage:
   cost: iron=4
   propertyChanges:
-    - obelisk.storedDamageMax = 500
-  predecessors: [obelisk]
+    - obel1sk.storedDamageMax = 500
+  predecessors: [obel1sk]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://content/weapons/obelisk/KillstreakEffect.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/KillstreakEffect.gd" type="Script" id=1]
 [ext_resource path="res://content/weapons/obelisk/img/killstreakStatic.png" type="Texture" id=3]
 [ext_resource path="res://content/sounds/Weapons/obelisk/bzzt.wav" type="AudioStream" id=4]
 [ext_resource path="res://systems/audio/Sound.tscn" type="PackedScene" id=5]
@@ -10,18 +10,6 @@
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 20.0
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 158, 158, 158 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 3 )
-region = Rect2( 158, 158, 158, 158 )
-
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 3 )
-region = Rect2( 316, 158, 158, 158 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 3 )
@@ -39,17 +27,29 @@ region = Rect2( 316, 0, 158, 158 )
 atlas = ExtResource( 3 )
 region = Rect2( 474, 0, 158, 158 )
 
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 158, 158, 158 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 158, 158, 158, 158 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 316, 158, 158, 158 )
+
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 13 ) ],
-"loop": false,
-"name": "vanish",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": true,
 "name": "static",
 "speed": 10.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 13 ) ],
+"loop": false,
+"name": "vanish",
+"speed": 5.0
 } ]
 
 [node name="KillstreakEffect" type="Node2D"]

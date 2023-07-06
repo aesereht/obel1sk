@@ -1,17 +1,17 @@
 [gd_scene load_steps=36 format=2]
 
-[ext_resource path="res://content/weapons/obelisk/ObeliskBeam.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskBeam.gd" type="Script" id=1]
 [ext_resource path="res://content/weapons/obelisk/img/DownSheet.png" type="Texture" id=2]
 [ext_resource path="res://content/sounds/Weapons/obelisk/beam_sustain.mp3" type="AudioStream" id=3]
 [ext_resource path="res://content/sounds/Weapons/obelisk/beam_stop.wav" type="AudioStream" id=4]
 [ext_resource path="res://content/sounds/Weapons/obelisk/beam_start.wav" type="AudioStream" id=5]
 [ext_resource path="res://systems/audio/Sound.tscn" type="PackedScene" id=6]
-[ext_resource path="res://content/weapons/obelisk/img/beamCore.png" type="Texture" id=7]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/beamCore.png" type="Texture" id=7]
 [ext_resource path="res://content/weapons/laser/laser_variations/laser.gdshader" type="Shader" id=8]
 [ext_resource path="res://systems/style/palettes/index_palette.png" type="Texture" id=9]
-[ext_resource path="res://content/weapons/obelisk/img/beamRadiance2.png" type="Texture" id=10]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/beamRadiance2.png" type="Texture" id=10]
 [ext_resource path="res://content/weapons/obelisk/img/beamEnd.png" type="Texture" id=11]
-[ext_resource path="res://content/weapons/obelisk/img/beamWindup.png" type="Texture" id=12]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/beamWindup.png" type="Texture" id=12]
 [ext_resource path="res://content/sounds/Weapons/obelisk/beam_hitstatic.wav" type="AudioStream" id=13]
 [ext_resource path="res://content/weapons/obelisk/img/beamEndHit.png" type="Texture" id=14]
 
@@ -198,7 +198,7 @@ position = Vector2( 0, 9 )
 rotation = -1.57079
 frames = SubResource( 10 )
 animation = "hit"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Tween" type="Tween" parent="."]

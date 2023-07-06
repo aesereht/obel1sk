@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://content/weapons/obelisk/ReticleSegment.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ReticleSegment.gd" type="Script" id=1]
 
 [node name="ReticleSegment" type="Sprite"]
 script = ExtResource( 1 )

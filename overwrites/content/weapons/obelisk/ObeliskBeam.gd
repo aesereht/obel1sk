@@ -1,4 +1,4 @@
-extends "res://content/weapons/obelisk/DamageManager.gd"
+extends "res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/DamageManager.gd"
 
 var is_active := false
 var hitMonsters := []

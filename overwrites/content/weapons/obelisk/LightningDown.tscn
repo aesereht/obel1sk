@@ -6,13 +6,33 @@
 [ext_resource path="res://content/weapons/obelisk/img/lightningDownSmall.png" type="Texture" id=4]
 [ext_resource path="res://content/weapons/obelisk/img/LightningDownMark.png" type="Texture" id=5]
 
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 800, 20 )
 
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 20, 800, 20 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 40, 800, 20 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 60, 800, 20 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 80, 800, 20 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 100, 800, 20 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 120, 800, 20 )
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 2 )
@@ -78,39 +98,19 @@ region = Rect2( 0, 60, 800, 20 )
 atlas = ExtResource( 5 )
 region = Rect2( 0, 80, 800, 20 )
 
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 4 )
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 800, 20 )
 
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 4 )
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 3 )
 region = Rect2( 0, 20, 800, 20 )
-
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 40, 800, 20 )
-
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 60, 800, 20 )
-
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 80, 800, 20 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 100, 800, 20 )
-
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 120, 800, 20 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ SubResource( 15 ), SubResource( 16 ) ],
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
 "loop": true,
-"name": "nuke",
+"name": "default",
 "speed": 10.0
 }, {
 "frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
@@ -123,9 +123,9 @@ animations = [ {
 "name": "mark",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
+"frames": [ SubResource( 15 ), SubResource( 16 ) ],
 "loop": true,
-"name": "default",
+"name": "nuke",
 "speed": 10.0
 } ]
 
