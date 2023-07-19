@@ -121,6 +121,7 @@ z_index = 101
 z_index = 80
 
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 position = Vector2( 0, -45 )
 z_index = 100
 texture = ExtResource( 2 )

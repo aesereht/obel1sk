@@ -55,13 +55,13 @@ domeobel1skwavemeter:
   predecessors: [domeobel1sk]
   predecessorsAny: true
   propertyChanges: 
-    - wavemeter.stage = 1
+    - wavemeter.stage += 2
 domeobel1skwavecount:
   cost: water=1
   predecessors: [domeobel1skwavemeter]
   predecessorsAny: true
   propertyChanges: 
-    - wavemeter.stage = 2
+    - wavemeter.stage += 4
 domeobel1skResourceCounters:
   cost: water=1
   predecessors: [domeobel1sk]

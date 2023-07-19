@@ -14,8 +14,10 @@ func _init(modLoader = ModLoader):
 	trans_dir = dir + "translations/"
 	
 	# Add extensions
-	ModLoaderMod.install_script_extension(ext_dir + "game/GameWorld.gd")
+	#ModLoaderMod.install_script_extension(ext_dir + "game/GameWorld.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "stages/level/LevelStage.gd")
+	ModLoaderMod.install_script_extension("res://mods-unpacked/Snek-Obel1sk/extensions/content/gagdets/repellent/Repellent.gd")
+	
 	#ModLoaderMod.install_script_extension(ext_dir + "systems/data/Data.gd")
 	
 	ModLoaderMod.add_translation(trans_dir + "obel1sk_text.en.translation")
@@ -26,6 +28,7 @@ func _ready():
 
 func modInit():
 	Data.registerDome("domeobel1sk")
+	GameWorld.unlockElement("domeobel1sk")
 	
 	var pathToModYaml : String = ModLoaderMod.get_unpacked_dir() + MYMODNAME_MOD_DIR + "yaml/"
 	Data.parseUpgradesYaml(pathToModYaml + "upgrades.yaml")

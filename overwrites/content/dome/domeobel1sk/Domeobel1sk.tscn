@@ -1,8 +1,8 @@
 [gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://content/dome/Dome.tscn" type="PackedScene" id=1]
-[ext_resource path="res://content/dome/dome1/shredder/Shredder1.tscn" type="PackedScene" id=2]
-[ext_resource path="res://content/dome/dome1/station/Station1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/dome/domeobel1sk/shredder/ShredderObel1sk.tscn" type="PackedScene" id=2]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/dome/domeobel1sk/station/StationObel1sk.tscn" type="PackedScene" id=3]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/dome/domeobel1sk/dome/domeobel1sk_shine.png" type="Texture" id=4]
 [ext_resource path="res://content/dome/damage_mask/hit_mask_shader.shader" type="Shader" id=5]
 [ext_resource path="res://content/dome/dome1/dome/cracks_mask.png" type="Texture" id=6]
@@ -17,7 +17,7 @@
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/dome/domeobel1sk/dome/domeobel1sk_back.png" type="Texture" id=15]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/gadgets/shield/shield_domeobel1sk.png" type="Texture" id=16]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/dome/domeobel1sk/dome/domeobel1sk_cracks.png" type="Texture" id=17]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/pets/pet1/PositionsDomeobel1sk.tscn" type="PackedScene" id=18]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/pets/pet2/PositionsDomeobel1sk.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Curve2D" id=1]
 bake_interval = 2.0
@@ -104,13 +104,13 @@ position = Vector2( 0, 0 )
 position = Vector2( -30, -49 )
 
 [node name="Shredder" parent="." index="8" instance=ExtResource( 2 )]
-position = Vector2( 0, -34 )
+position = Vector2( 0, -36 )
 
 [node name="PrimaryGadgetContainer" parent="." index="9"]
 position = Vector2( -34, 3 )
 
 [node name="Station" parent="." index="10" instance=ExtResource( 3 )]
-position = Vector2( 45, -1 )
+position = Vector2( 31, -3 )
 
 [node name="EggDropPoint" parent="." index="13"]
 position = Vector2( -18, -9 )
