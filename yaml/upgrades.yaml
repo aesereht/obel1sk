@@ -313,18 +313,13 @@ obel1skNukes1:
     - obel1sk.reticleSpeedAddOnShoot = 2.5
     - obel1sk.reticleSpeedAddOnShootDuration = 0.75
    predecessors: [obel1skDefault2]
-   locks: [obel1skBurst1]
-obel1skBurst1:
-  cost: iron=14
+   locks: [obel1skDeathCandles]
+obel1skDeathCandles:
+  cost: iron=5
   propertyChanges:
-    - obel1sk.damage = 33
-    - obel1sk.speedWhileShooting = 0.75
-    - obel1sk.shootDelay = 1.5
-    - obel1sk.burstCount = 3
-    - obel1sk.burstDelay = 0.27
-    - obel1sk.shootingSpreadMax = 80.0
-    - obel1sk.shootingSpreadGrowth = 4.0/h
-    - obel1sk.shootingSpreadDecay = 0.25/h
+    - obel1sk.deathCandles = true/h
+    - obel1sk.deathCandleMinDuration = 5.0
+    - obel1sk.deathCandleMaxDuration = 25.0
   locks: [obel1skNukes1]
   predecessors: [obel1skDefault2]
 obel1skNukes2:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/Obelisk.gd" type="Script" id=1]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/obelisk.png" type="Texture" id=2]
@@ -34,6 +34,43 @@
 [ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_01.wav" type="AudioStream" id=32]
 [ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_03.wav" type="AudioStream" id=33]
 [ext_resource path="res://content/sounds/Weapons/obelisk/obelisk_overheat.wav" type="AudioStream" id=34]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/active_static.png" type="Texture" id=35]
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 35 )
+region = Rect2( 0, 0, 75, 75 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 35 )
+region = Rect2( 75, 0, 75, 75 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 35 )
+region = Rect2( 150, 0, 75, 75 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 35 )
+region = Rect2( 225, 0, 75, 75 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 35 )
+region = Rect2( 300, 0, 75, 75 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 35 )
+region = Rect2( 375, 0, 75, 75 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 35 )
+region = Rect2( 450, 0, 75, 75 )
+
+[sub_resource type="SpriteFrames" id=18]
+animations = [ {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -139,7 +176,7 @@ position = Vector2( -15, -6 )
 z_index = 100
 
 [node name="ArcOrigin" type="Position2D" parent="."]
-position = Vector2( 0, -84 )
+position = Vector2( 0, -50 )
 
 [node name="BeamOutline" type="Line2D" parent="."]
 width = 2.0
@@ -147,7 +184,13 @@ texture = ExtResource( 27 )
 texture_mode = 1
 
 [node name="ReticleSpawn" type="Position2D" parent="."]
-position = Vector2( 0, -86 )
+position = Vector2( 0, -52 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="ReticleSpawn"]
+position = Vector2( 0, 1 )
+frames = SubResource( 18 )
+frame = 5
+playing = true
 
 [node name="ObeliskLightning" parent="." instance=ExtResource( 5 )]
 

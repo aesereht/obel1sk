@@ -160,7 +160,7 @@ func init(_unusedCupolaPath):
 	$AutoAim.playing = true
 	
 	Style.init(self)
-
+	$ReticleSpawn/AnimatedSprite.visible = false
 
 
 func move(dir:Vector2, allowMove:bool = true):
@@ -710,7 +710,7 @@ func _process(delta: float) -> void:
 	
 	if (reloadFromEmpty or (Data.of("obel1sk.chStyle") == 4 and cur_ammo == 0)) and not $Overheat.playing:
 		$Overheat.play()
-		print("start")
+		#print("start")
 	elif cur_ammo == Data.of("obel1sk.maxAmmo"):
 		$Overheat.stop()
 
@@ -839,6 +839,7 @@ func set_is_active(value:bool):
 	$KillstreakTracker.set_visible(is_active)
 	$StoredDamage.visible = is_active and Data.of("obel1sk.storedDamageMax") > 0
 	bonus_damage_visible(is_active)
+	$ReticleSpawn/AnimatedSprite.visible = is_active
 
 func is_beam_active():
 	if reloadFromEmpty:

@@ -90,6 +90,9 @@ func _process(delta: float) -> void:
 		else:
 			remove()
 	
+	if targetMonster.monsterFollowerImmunity:
+		remove()
+	
 
 func increment_stacks():
 	return

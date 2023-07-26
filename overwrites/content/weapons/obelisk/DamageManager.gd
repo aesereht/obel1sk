@@ -43,7 +43,7 @@ func init():
 	
 	if Data.of("obel1sk.ammoUsage") > 0 and obelisk.cur_ammo == 0:
 		damageMults.append(Data.of("obel1sk.lastShotDamageMult"))
-		print("more damage")
+		#print("more damage")
 	
 	# is capped at 0 by default so no if statement needed
 	var merciless = obelisk.mercilessMult("damage")
