@@ -16,7 +16,9 @@ func _init(modLoader = ModLoader):
 	# Add extensions
 	#ModLoaderMod.install_script_extension(ext_dir + "game/GameWorld.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "stages/level/LevelStage.gd")
-	ModLoaderMod.install_script_extension("res://mods-unpacked/Snek-Obel1sk/extensions/content/gagdets/repellent/Repellent.gd")
+	ModLoaderMod.install_script_extension(ext_dir + "content/gagdets/repellent/Repellent.gd")
+	ModLoaderMod.install_script_extension(ext_dir + "content/gagdets/orchard/Orchard.gd")
+	#ModLoaderMod.install_script_extension(ext_dir + "/content/gagdets/orchard/Orchard.gd")
 	
 	#ModLoaderMod.install_script_extension(ext_dir + "systems/data/Data.gd")
 	

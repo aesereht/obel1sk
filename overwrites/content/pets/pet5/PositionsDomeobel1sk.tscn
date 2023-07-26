@@ -1,0 +1,30 @@
+[gd_scene format=2]
+
+[node name="PositionsDomeobel1sk" type="Node2D"]
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( -20, 2 )
+
+[node name="Position2D2" type="Position2D" parent="."]
+position = Vector2( -13, -2 )
+
+[node name="Position2D3" type="Position2D" parent="."]
+position = Vector2( -31, 3 )
+
+[node name="Position2D4" type="Position2D" parent="."]
+position = Vector2( -24, 6 )
+
+[node name="Position2D5" type="Position2D" parent="."]
+position = Vector2( 23, 5 )
+
+[node name="Position2D6" type="Position2D" parent="."]
+position = Vector2( 24, 1 )
+
+[node name="Position2D7" type="Position2D" parent="."]
+position = Vector2( 21, -7 )
+
+[node name="Position2D8" type="Position2D" parent="."]
+position = Vector2( 20, -36 )
+
+[node name="Position2D9" type="Position2D" parent="."]
+position = Vector2( -26, -35 )

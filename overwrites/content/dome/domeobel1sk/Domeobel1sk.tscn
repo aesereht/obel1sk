@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://content/dome/Dome.tscn" type="PackedScene" id=1]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/dome/domeobel1sk/shredder/ShredderObel1sk.tscn" type="PackedScene" id=2]
@@ -17,7 +17,6 @@
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/dome/domeobel1sk/dome/domeobel1sk_back.png" type="Texture" id=15]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/gadgets/shield/shield_domeobel1sk.png" type="Texture" id=16]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/dome/domeobel1sk/dome/domeobel1sk_cracks.png" type="Texture" id=17]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/pets/pet2/PositionsDomeobel1sk.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Curve2D" id=1]
 bake_interval = 2.0
@@ -107,7 +106,7 @@ position = Vector2( -30, -49 )
 position = Vector2( 0, -36 )
 
 [node name="PrimaryGadgetContainer" parent="." index="9"]
-position = Vector2( -34, 3 )
+position = Vector2( -24, 3 )
 
 [node name="Station" parent="." index="10" instance=ExtResource( 3 )]
 position = Vector2( 31, -3 )
@@ -137,6 +136,7 @@ polygon = PoolVector2Array( -35, 5, -20, 4, -14, 12, -14, 15, -75, 11, -75, 2, -
 polygon = PoolVector2Array( 30, 4, 20, 3, 14, 12, 14, 15, 74, 11, 74, 2, 50, 5 )
 
 [node name="HealEffect" parent="." index="16"]
+visible = false
 mask = ExtResource( 15 )
 
 [node name="Shield" parent="." index="17"]
@@ -253,5 +253,3 @@ position = Vector2( 24, -46 )
 
 [node name="Position4" parent="ProjectileTargets" index="3"]
 position = Vector2( 52, -28 )
-
-[node name="PositionsDomeobel1sk" parent="." index="33" instance=ExtResource( 18 )]
