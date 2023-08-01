@@ -1,8 +1,8 @@
 keys,en
-upgrades.domeobel1sk.title,Obel1sk Dome
+upgrades.domeobel1sk.title,Phosphorescence Dome
 upgrades.domeobel1sk.desc,"Ancient technology, unearthed for your space war crime needs."
-upgrades.obel1sk.title,The First obel1sk
-upgrades.obel1sk.desc,Introduce the marvel of electricity to whatever is out there. Preferably to the face. At several thousand volts.
+upgrades.obel1sk.title,Phosphorescence
+upgrades.obel1sk.desc,Unleash a controlled high-energy discharge from the Dome's peak.
 upgrades.obel1skquickreload.title,Voltage Spike
 upgrades.obel1skquickreload.desc,"Adds a brief window to the reloading process, during which the process can be completed prematurely with the help of manual input."
 upgrades.obel1skammokill.title,Monster Recycling
@@ -15,9 +15,9 @@ upgrades.obel1skdamage.title,Bigger Coils
 upgrades.obel1skdamage.desc,Multiplies all direct shot damage.
 upgrades.obel1skslowdamage.title,Lead Plating
 upgrades.obel1skslowdamage.desc,Multiplies direct damage but weighs down the reticle.
-upgrades.obel1skdefault1.title,Heavy Bolts
+upgrades.obel1skdefault1.title,Photonic Smackdown
 upgrades.obel1skdefault1.desc,"Increases damage and explosion radius."
-upgrades.obel1skdefault2.title,Devastator Bolts
+upgrades.obel1skdefault2.title,Photonic Devastation
 upgrades.obel1skdefault2.desc,"Further increases shot power and slightly increases reticle speed at the cost of fire rate."
 upgrades.obel1skburst1.title,Burst Fire
 upgrades.obel1skburst1.desc,Delivers a cluster of multiple smaller shots onto monsters.
@@ -33,7 +33,7 @@ upgrades.obel1sksniperautoaim.title,Automated Targeting System
 upgrades.obel1sksniperautoaim.desc,"After killing a monster, shots will be guaranteed to hit monsters inside the reticle for a limited time."
 upgrades.obel1skstunarea.title,Vapor Trail
 upgrades.obel1skstunarea.desc,Slows down monsters caught in the arcs going to the reticle.
-upgrades.obel1sknukes1.title,Laser Fission
+upgrades.obel1sknukes1.title,The Sun
 upgrades.obel1sknukes1.desc,"A devastating radioactive blast that accelerates the reticle for a short time after firing."
 upgrades.obel1sknukes2.title,Echoing Fallout
 upgrades.obel1sknukes2.desc,"Creates a stunning blast around the main explosion that is just as radioactive. Increases time taken until the lightning comes down."
@@ -41,7 +41,7 @@ upgrades.obel1sknukesimpulse.title,Reticle Impulse
 upgrades.obel1sknukesimpulse.desc,"Provides a temporary reticle speed boost after pulling the trigger."
 upgrades.obel1sknukesspreading.title,Contagious Cell Decay
 upgrades.obel1sknukesspreading.desc,"When a monster dies, it spreads radiation to all monsters surrounding it."
-upgrades.obel1sksniper1.title,Precision Bolts
+upgrades.obel1sksniper1.title,Scalpel of Light
 upgrades.obel1sksniper1.desc,"Single-target shot that deals more damage the longer it rests. Ammo recharges automatically. Reticle can be slowed manually to preserve bonus damage."
 upgrades.obel1sksniper2.title,Charged Munitions
 upgrades.obel1sksniper2.desc,"Hit monsters become conduits for bolts of arcing electricity that propagate through other nearby monsters."
@@ -155,3 +155,17 @@ upgrades.domeobel1skadaptation.title,Reactive Cupola
 upgrades.domeobel1skadaptation.desc,"After the dome is hit, it temporarily reduces further damage. Damage resistance can stack."
 upgrades.domeobel1skadaptationduration.title,Stabilized Cupola
 upgrades.domeobel1skadaptationduration.desc,"Prolong the time the damage reduction is active."
+upgrades.domeobel1skhealthmeter.title,Health Meter
+upgrades.domeobel1skhealthmeter.desc,Displays the dome's structural health.
+upgrades.domeobel1skwavemeter.title,Hostile Proximity Meter
+upgrades.domeobel1skwavemeter.desc,Displays the time until the next wave of hostile lifeforms attack.
+upgrades.domeobel1skwavecount.title,Cycle Counter
+upgrades.domeobel1skwavecount.desc,Install a counter that shows how many waves you've survived.
+upgrades.domeobel1skresourcecounters.title,Inventory
+upgrades.domeobel1skresourcecounters.desc,Displays the current amount of stored resources.
+upgrades.obel1skdamage1.title,Damage 1
+upgrades.obel1skdamage1.desc,Multiplies direct damage.
+upgrades.obel1skdamage2.title,Damage 2
+upgrades.obel1skdamage2.desc,Further multiplies direct damage.
+upgrades.obel1skdeathcandles.title,Death Candles
+upgrades.obel1skdeathcandles.desc,Deceased monsters leave behind ephemeral auras that slow down those left alive. Duration of the candles is proportional to monster health.

@@ -35,7 +35,7 @@ domeobel1skAdaptationDuration:
   repeatable:
     - cost.sand += 1
   predecessors: [domeobel1skAdaptation]
-domeobel1skHealth2:
+domeobel1skHealth1:
   cost: iron=8
   propertyChanges: 
     - dome.maxhealth += 200
@@ -47,7 +47,7 @@ domeobel1skMaxRestore:
   propertyChanges:
     - dome.maxhealth = 1000
     - dome.health = 1000
-  predecessors: [domeobel1skHealth2]
+  predecessors: [domeobel1skHealth1]
   repeatable:
     - cost.sand += 1
 domeobel1skwavemeter:
@@ -211,18 +211,6 @@ obel1skSpeed2:
   propertyChanges: 
     - obel1sk.maxReticleSpeed += 1.2
   predecessors: [obel1skSpeed1]
-obel1skSlowDamage:
-  cost: iron=8
-  propertyChanges:
-    - obel1sk.maxReticleSpeed -= 0.35
-    - obel1sk.damageMult += 1.0
-    - obel1sk.reticleSpreadAdd = 30
-  predecessors: [obel1sk]
-obel1skDamage:
-  cost: iron=13
-  propertyChanges:
-    - obel1sk.damageMult += 1.25
-  predecessors: [obel1skDefault1]
 obel1skDefault1:
   cost: iron=10
   propertyChanges:
@@ -230,24 +218,6 @@ obel1skDefault1:
     - obel1sk.radius = 30
     - obel1sk.stun = 20.0/h
   predecessors: [obel1sk]
-  locks: [obel1skSpooling1]
-obel1skSpooling1:
-  cost: iron=10
-  propertyChanges:
-    - obel1sk.damage = 13
-    - obel1sk.radius = 14
-    - obel1sk.speedWhileShooting = 0.38
-    - obel1sk.shootDelay = 0.45
-    - obel1sk.minReticleSpread = 47.0/h
-    - obel1sk.maxReticleSpread = 77.0/h
-    - obel1sk.maxShootDelayReduction = 0.225
-    - obel1sk.shootDelayReductionIncrease = 0.025
-    - obel1sk.shootingSpreadMax = -35.0/h
-    - obel1sk.shootingSpreadGrowth = -0.75/h
-    - obel1sk.shootingSpreadDecay = 1.0/h
-    - obel1sk.chStyle = 5/h
-  predecessors: [obel1sk]
-  locks: [obel1skDefault1]
 obel1skDefault2:
   cost: iron=14
   propertyChanges:
@@ -313,13 +283,17 @@ obel1skNukes1:
     - obel1sk.reticleSpeedAddOnShoot = 2.5
     - obel1sk.reticleSpeedAddOnShootDuration = 0.75
    predecessors: [obel1skDefault2]
-   locks: [obel1skDeathCandles]
-obel1skDeathCandles:
-  cost: iron=5
+obel1skBurst1:
+  cost: iron=14
   propertyChanges:
-    - obel1sk.deathCandles = true/h
-    - obel1sk.deathCandleMinDuration = 5.0
-    - obel1sk.deathCandleMaxDuration = 25.0
+    - obel1sk.damage = 33
+    - obel1sk.speedWhileShooting = 0.75
+    - obel1sk.shootDelay = 1.5
+    - obel1sk.burstCount = 3
+    - obel1sk.burstDelay = 0.27
+    - obel1sk.shootingSpreadMax = 80.0
+    - obel1sk.shootingSpreadGrowth = 4.0/h
+    - obel1sk.shootingSpreadDecay = 0.25/h
   locks: [obel1skNukes1]
   predecessors: [obel1skDefault2]
 obel1skNukes2:
@@ -366,38 +340,11 @@ obel1skSniperAutoAim:
   locks: [obel1skSniper3]
   predecessors: [obel1skSniper2, obel1skAmmoKill]
   predecessorsAny: true
-obel1skSpooling2:
-  cost: iron=10
-  propertyChanges:
-    - obel1sk.damage = 13/h
-    - obel1sk.maxShootDelayReduction = 0.3
-    - obel1sk.shootDelayReductionIncrease = 0.04
-  predecessors: [obel1skSpooling1]
-obel1skDamageRepeatable:
-  cost: iron=6
-  propertyChanges:
-    - obel1sk.damageMult += 0.15
-  repeatable:
-    - cost.iron += 2
-  predecessors: [obel1skSpooling1]
-obel1skSpooling3:
-  cost: iron=16
-  propertyChanges:
-    - obel1sk.damage = 17
-    - obel1sk.speedWhileShooting = 0.2
-    - obel1sk.maxShootDelayReduction = 0.35
-    - obel1sk.minReticleSpread = 60.0/h
-    - obel1sk.maxReticleSpread = 90.0
-    - obel1sk.shootingSpreadMax = -40.0/h
-    - obel1sk.shootingSpreadGrowth = -2.0/h
-    - obel1sk.shootingSpreadDecay = 2.0/h
-  locks: [obel1skBeam1]
-  predecessors: [obel1skSpooling2]
 obel1skStunArea:
   cost: iron=10
   propertyChanges:
     - obel1sk.stunAlongArc = true
-  predecessors: [obel1skSpooling3]
+  predecessors: [obel1skDeathCandles]
 obel1skBeam1:
   cost: iron=16
   propertyChanges:
@@ -432,8 +379,33 @@ obel1skBeamPiercing:
     - obel1sk.damage = 70
     - obel1sk.maxAmmo = 160
   predecessors: [obel1skBeam1]
+
+obel1skDamage1:
+  cost: iron=7
+  propertyChanges:
+    - obel1sk.damageMult += 0.65
+  predecessors: [obel1sk]
+obel1skDamage2:
+  cost: iron=13
+  propertyChanges:
+    - obel1sk.damageMult += 0.85
+  predecessors: [obel1skDamage1]
+obel1skSlowDamage:
+  cost: iron=8
+  propertyChanges:
+    - obel1sk.maxReticleSpeed -= 0.35
+    - obel1sk.damageMult += 1.0
+    - obel1sk.reticleSpreadAdd = 30
+  predecessors: [obel1skDamage2]
 obel1skStoreDamage:
   cost: iron=4
   propertyChanges:
     - obel1sk.storedDamageMax = 500
-  predecessors: [obel1sk]
+  predecessors: [obel1skSlowDamage]
+obel1skDeathCandles:
+  cost: iron=5
+  propertyChanges:
+    - obel1sk.deathCandles = true/h
+    - obel1sk.deathCandleMinDuration = 5.0
+    - obel1sk.deathCandleMaxDuration = 25.0
+  predecessors: [obel1skDamage2]

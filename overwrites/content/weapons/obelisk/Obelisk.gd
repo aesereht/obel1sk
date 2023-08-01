@@ -161,6 +161,7 @@ func init(_unusedCupolaPath):
 	
 	Style.init(self)
 	$ReticleSpawn/AnimatedSprite.visible = false
+	$ActiveStatic.visible = false
 
 
 func move(dir:Vector2, allowMove:bool = true):
@@ -441,7 +442,7 @@ func propertyChanged(property:String, oldValue, newValue):
 					set_cur_ammo(cur_ammo - diff)
 		"obel1sk.killstreaks":
 			$KillstreakTracker.visible = newValue
-		"obel1sk.chStyle":
+		"obel1sk.chstyle":
 			if int(newValue) == 4: # beam
 				$ReticleSpawn.position.y = 20
 			else:
@@ -840,6 +841,7 @@ func set_is_active(value:bool):
 	$StoredDamage.visible = is_active and Data.of("obel1sk.storedDamageMax") > 0
 	bonus_damage_visible(is_active)
 	$ReticleSpawn/AnimatedSprite.visible = is_active
+	$ActiveStatic.visible = is_active
 
 func is_beam_active():
 	if reloadFromEmpty:
@@ -936,6 +938,9 @@ func shoot(
 	if cur_burstCount >= Data.of("obel1sk.burstCount"):
 		cur_burstCount = 0
 	#print(str("burst cnt is now ", cur_burstCount))
+	
+	$ActiveStatic/ShootFlicker.frame = 0
+	$ActiveStatic/ShootFlicker.play("default")
 
 func setCurRestDamageMult(value:float):
 	cur_restDamageMult = value

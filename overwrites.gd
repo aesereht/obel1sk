@@ -7,8 +7,47 @@ const GAME_ICON_PATH := "res://content/icons/"
 const MOD_PETS_PATH := "res://mods-unpacked/Snek-Obel1sk/overwrites/content/pets/"
 const GAME_PETS_PATH := "res://content/pets/"
 
+var upgrade_icons := [
+	"ammokill.png",
+	"burst1.png",
+	"burst2.png",
+	"damage1.png",
+	"damage2.png",
+	"deathcandles.png",
+	"default1.png",
+	"default2.png",
+	"nukes1.png",
+	"nukes2.png",
+	"slowdamage.png",
+	"sniper1.png",
+	"sniper2.png",
+	"sniper3.png",
+	"sniperautoaim.png",
+	"speed1.png",
+	"speed2.png",
+	"spooling1.png",
+	"storedamage.png",
+	"stunarea.png",
+]
+
+var upgrade_icons_dome := [
+	"health1.png",
+	"adaptation.png",
+	"adaptationduration.png",
+	"ironrepair.png",
+	"maxrestore.png",
+]
 var icons := [
 	"loadout_domeobel1sk.png",
+	"domeobel1sk.png",
+	"obel1sk.png",
+]
+
+var vanilla_icons = [
+	"healthmeter.png",
+	"wavemeter.png",
+	"resourcecounters.png",
+	"wavecount.png"
 ]
 
 var iconTextures := []
@@ -22,6 +61,21 @@ func _init():
 		var overwrite = load(MOD_ICON_PATH+icon)
 		iconTextures.append(overwrite)
 		overwrite.take_over_path(GAME_ICON_PATH+icon)
+		
+	for icon in upgrade_icons:
+		var overwrite = load(MOD_ICON_PATH+icon)
+		iconTextures.append(overwrite)
+		overwrite.take_over_path(GAME_ICON_PATH+"obel1sk"+icon)
+		
+	for icon in upgrade_icons_dome:
+		var overwrite = load(MOD_ICON_PATH+"domeobel1sk"+icon)
+		iconTextures.append(overwrite)
+		overwrite.take_over_path(GAME_ICON_PATH+"domeobel1sk"+icon)
+	
+	for icon in vanilla_icons:
+		var overwrite = load(GAME_ICON_PATH+"dome"+icon)
+		iconTextures.append(overwrite)
+		overwrite.take_over_path(GAME_ICON_PATH+"domeobel1sk"+icon)
 	
 	for i in range(6):
 		var id = i + 1
