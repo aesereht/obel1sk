@@ -103,6 +103,11 @@ enum Styles {Default, Sniper, Nukes, FullAuto, Beam, FullAutoCircle}
 
 var reloading = false
 
+# I was just too lazy to fix these dependencies in-script
+export(Texture) var FACircle_reload
+export(Texture) var FACircle_hover
+export(Texture) var FACircle_no
+
 func init():
 	Data.listen(self, "obel1sk.chStyle", true)
 
@@ -220,11 +225,11 @@ func _process(delta: float) -> void:
 				ch.set_normal()
 	else:
 		if reloading and not Data.of("obel1sk.rechargeAmmo"):
-			$FullAutoCircle.texture = load("res://content/weapons/obelisk/img/crosshairsFACircle_reload.png")
+			$FullAutoCircle.texture = FACircle_reload
 		elif (detectedMonsters.size() > 0 and monsterDetectionHighlightsCrosshairs) or hoverOverride:
-			$FullAutoCircle.texture = load("res://content/weapons/obelisk/img/crosshairsFACircle_hover.png")
+			$FullAutoCircle.texture = FACircle_hover
 		else:
-			$FullAutoCircle.texture = load("res://content/weapons/obelisk/img/crosshairsFACircle_no.png")
+			$FullAutoCircle.texture = FACircle_no
 	
 	$MonsterDetection/CollisionShape2D.shape.radius = min(cur_spread, Data.of("obel1sk.detectionRadius"))
 	

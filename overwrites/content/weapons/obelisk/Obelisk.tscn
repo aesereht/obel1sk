@@ -1,7 +1,7 @@
 [gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/Obelisk.gd" type="Script" id=1]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/obelisk.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/obel1sk_obelisk.png" type="Texture" id=2]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/Reticle.tscn" type="PackedScene" id=3]
 [ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_02.wav" type="AudioStream" id=4]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskLightning.tscn" type="PackedScene" id=5]
@@ -26,49 +26,49 @@
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskShockArc.tscn" type="PackedScene" id=24]
 [ext_resource path="res://content/sounds/Weapons/obelisk/ShotgunContinous_1.wav" type="AudioStream" id=25]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/KillstreakTracker.tscn" type="PackedScene" id=26]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/outlineLineTexture.png" type="Texture" id=27]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_outlineLineTexture.png" type="Texture" id=27]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/DeathCandleArea.gd" type="Script" id=28]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/autoAimActive.png" type="Texture" id=29]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/autoAimInctive.png" type="Texture" id=30]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_autoAimActive.png" type="Texture" id=29]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_autoAimInctive.png" type="Texture" id=30]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/StoredDamage.tscn" type="PackedScene" id=31]
 [ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_01.wav" type="AudioStream" id=32]
 [ext_resource path="res://content/sounds/Weapons/obelisk/Shotgun_03.wav" type="AudioStream" id=33]
 [ext_resource path="res://content/sounds/Weapons/obelisk/obelisk_overheat.wav" type="AudioStream" id=34]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/active_static.png" type="Texture" id=35]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/shoot_flicker.png" type="Texture" id=36]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/active_static2.png" type="Texture" id=37]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_active_static.png" type="Texture" id=35]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_shoot_flicker.png" type="Texture" id=36]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_active_static2.png" type="Texture" id=37]
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=30]
 atlas = ExtResource( 35 )
 region = Rect2( 0, 0, 75, 75 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=31]
 atlas = ExtResource( 35 )
 region = Rect2( 75, 0, 75, 75 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=32]
 atlas = ExtResource( 35 )
 region = Rect2( 150, 0, 75, 75 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=33]
 atlas = ExtResource( 35 )
 region = Rect2( 225, 0, 75, 75 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=34]
 atlas = ExtResource( 35 )
 region = Rect2( 300, 0, 75, 75 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=35]
 atlas = ExtResource( 35 )
 region = Rect2( 375, 0, 75, 75 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=36]
 atlas = ExtResource( 35 )
 region = Rect2( 450, 0, 75, 75 )
 
 [sub_resource type="SpriteFrames" id=18]
 animations = [ {
-"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"frames": [ SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -76,98 +76,98 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=1]
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=37]
 atlas = ExtResource( 29 )
 region = Rect2( 0, 0, 18, 18 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=38]
 atlas = ExtResource( 29 )
 region = Rect2( 18, 0, 18, 18 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=39]
 atlas = ExtResource( 29 )
 region = Rect2( 36, 0, 18, 18 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=40]
 atlas = ExtResource( 29 )
 region = Rect2( 54, 0, 18, 18 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=41]
 atlas = ExtResource( 30 )
 region = Rect2( 0, 0, 18, 18 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=42]
 atlas = ExtResource( 30 )
 region = Rect2( 18, 0, 18, 18 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=43]
 atlas = ExtResource( 30 )
 region = Rect2( 36, 0, 18, 18 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=44]
 atlas = ExtResource( 30 )
 region = Rect2( 54, 0, 18, 18 )
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"frames": [ SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ) ],
 "loop": true,
 "name": "active",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"frames": [ SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
 "loop": true,
 "name": "inactive",
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=45]
 atlas = ExtResource( 37 )
 region = Rect2( 0, 0, 173, 124 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=46]
 atlas = ExtResource( 37 )
 region = Rect2( 173, 0, 173, 124 )
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=47]
 atlas = ExtResource( 37 )
 region = Rect2( 346, 0, 173, 124 )
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=48]
 atlas = ExtResource( 37 )
 region = Rect2( 519, 0, 173, 124 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=49]
 atlas = ExtResource( 37 )
 region = Rect2( 692, 0, 173, 124 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=50]
 atlas = ExtResource( 37 )
 region = Rect2( 865, 0, 173, 124 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=51]
 atlas = ExtResource( 37 )
 region = Rect2( 1038, 0, 173, 124 )
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=52]
 atlas = ExtResource( 37 )
 region = Rect2( 1211, 0, 173, 124 )
 
 [sub_resource type="SpriteFrames" id=27]
 animations = [ {
-"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
+"frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=28]
+[sub_resource type="AtlasTexture" id=53]
 atlas = ExtResource( 36 )
 region = Rect2( 0, 0, 104, 67 )
 
 [sub_resource type="SpriteFrames" id=29]
 animations = [ {
-"frames": [ null, SubResource( 28 ), null, SubResource( 28 ), null ],
+"frames": [ null, SubResource( 53 ), null, SubResource( 53 ), null ],
 "loop": false,
 "name": "default",
 "speed": 8.0
@@ -367,7 +367,7 @@ loop = true
 [node name="ActiveStatic" type="AnimatedSprite" parent="."]
 position = Vector2( 4, -30 )
 frames = SubResource( 27 )
-frame = 2
+frame = 7
 playing = true
 
 [node name="ShootFlicker" type="AnimatedSprite" parent="ActiveStatic"]

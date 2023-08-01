@@ -1,10 +1,10 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/Reticle.gd" type="Script" id=1]
 [ext_resource path="res://content/weapons/obelisk/img/crosshairsSniper_no.png" type="Texture" id=2]
 [ext_resource path="res://content/weapons/obelisk/img/crosshairsDefault_no.png" type="Texture" id=3]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/hitMarker3TH.png" type="Texture" id=4]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/denialVFX.png" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_hitMarker3TH.png" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_denialVFX.png" type="Texture" id=5]
 [ext_resource path="res://systems/audio/Sound.tscn" type="PackedScene" id=6]
 [ext_resource path="res://content/sounds/Weapons/obelisk/tiles_04.wav" type="AudioStream" id=7]
 [ext_resource path="res://content/weapons/obelisk/img/crosshairsDefault_hover.png" type="Texture" id=8]
@@ -31,8 +31,10 @@
 [ext_resource path="res://content/weapons/obelisk/img/crosshairsBeamNarrow_reloadR.png" type="Texture" id=29]
 [ext_resource path="res://content/weapons/obelisk/img/crosshairsBeamNarrow_reloadL.png" type="Texture" id=30]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/FAPoint.gd" type="Script" id=31]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/crosshairsFACircle_hover.png" type="Texture" id=32]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/outlineLineTexture.png" type="Texture" id=33]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_crosshairsFACircle_hover.png" type="Texture" id=32]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_outlineLineTexture.png" type="Texture" id=33]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_crosshairsFACircle_no.png" type="Texture" id=34]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_crosshairsFACircle_reload.png" type="Texture" id=35]
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 1.0
@@ -40,29 +42,29 @@ radius = 1.0
 [sub_resource type="CircleShape2D" id=3]
 radius = 15.0
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 5 )
 region = Rect2( 16, 0, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 5 )
 region = Rect2( 32, 0, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 16, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 5 )
 region = Rect2( 16, 16, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=15]
 animations = [ {
-"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
 "loop": false,
 "name": "default",
 "speed": 10.0
@@ -71,6 +73,9 @@ animations = [ {
 [node name="Reticle" type="Node2D"]
 z_index = 200
 script = ExtResource( 1 )
+FACircle_reload = ExtResource( 35 )
+FACircle_hover = ExtResource( 32 )
+FACircle_no = ExtResource( 34 )
 
 [node name="DefaultContainer" type="Node2D" parent="."]
 

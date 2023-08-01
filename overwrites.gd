@@ -8,39 +8,39 @@ const MOD_PETS_PATH := "res://mods-unpacked/Snek-Obel1sk/overwrites/content/pets
 const GAME_PETS_PATH := "res://content/pets/"
 
 var upgrade_icons := [
-	"ammokill.png",
-	"burst1.png",
-	"burst2.png",
-	"damage1.png",
-	"damage2.png",
-	"deathcandles.png",
-	"default1.png",
-	"default2.png",
-	"nukes1.png",
-	"nukes2.png",
-	"slowdamage.png",
-	"sniper1.png",
-	"sniper2.png",
-	"sniper3.png",
-	"sniperautoaim.png",
-	"speed1.png",
-	"speed2.png",
-	"spooling1.png",
-	"storedamage.png",
-	"stunarea.png",
+	"obel1sk_ammokill.png",
+	"obel1sk_burst1.png",
+	"obel1sk_burst2.png",
+	"obel1sk_damage1.png",
+	"obel1sk_damage2.png",
+	"obel1sk_deathcandles.png",
+	"obel1sk_default1.png",
+	"obel1sk_default2.png",
+	"obel1sk_nukes1.png",
+	"obel1sk_nukes2.png",
+	"obel1sk_slowdamage.png",
+	"obel1sk_sniper1.png",
+	"obel1sk_sniper2.png",
+	"obel1sk_sniper3.png",
+	"obel1sk_sniperautoaim.png",
+	"obel1sk_speed1.png",
+	"obel1sk_speed2.png",
+	"obel1sk_spooling1.png",
+	"obel1sk_storedamage.png",
+	"obel1sk_stunarea.png",
 ]
 
 var upgrade_icons_dome := [
-	"health1.png",
-	"adaptation.png",
-	"adaptationduration.png",
-	"ironrepair.png",
-	"maxrestore.png",
+	"obel1sk_health1.png",
+	"obel1sk_adaptation.png",
+	"obel1sk_adaptationduration.png",
+	"obel1sk_ironrepair.png",
+	"obel1sk_maxrestore.png",
 ]
 var icons := [
-	"loadout_domeobel1sk.png",
-	"domeobel1sk.png",
-	"obel1sk.png",
+	"obel1sk_loadout_domeobel1sk.png",
+	"obel1sk_domeobel1sk.png",
+	"obel1sk_obel1sk.png",
 ]
 
 var vanilla_icons = [
@@ -57,25 +57,28 @@ var petPositions := []
 var otherOverwrites := []
 
 func _init():
+	var rt = "sdf"
+	rt
+	
 	for icon in icons:
 		var overwrite = load(MOD_ICON_PATH+icon)
 		iconTextures.append(overwrite)
-		overwrite.take_over_path(GAME_ICON_PATH+icon)
+		overwrite.take_over_path(GAME_ICON_PATH+ icon.trim_prefix("obel1sk_"))
 		
 	for icon in upgrade_icons:
 		var overwrite = load(MOD_ICON_PATH+icon)
 		iconTextures.append(overwrite)
-		overwrite.take_over_path(GAME_ICON_PATH+"obel1sk"+icon)
+		overwrite.take_over_path(GAME_ICON_PATH+"obel1sk"+icon.trim_prefix("obel1sk_"))
 		
 	for icon in upgrade_icons_dome:
-		var overwrite = load(MOD_ICON_PATH+"domeobel1sk"+icon)
+		var overwrite = load(MOD_ICON_PATH+"obel1sk_domeobel1sk"+icon.trim_prefix("obel1sk_"))
 		iconTextures.append(overwrite)
-		overwrite.take_over_path(GAME_ICON_PATH+"domeobel1sk"+icon)
+		overwrite.take_over_path(GAME_ICON_PATH+"domeobel1sk"+icon.trim_prefix("obel1sk_"))
 	
 	for icon in vanilla_icons:
 		var overwrite = load(GAME_ICON_PATH+"dome"+icon)
 		iconTextures.append(overwrite)
-		overwrite.take_over_path(GAME_ICON_PATH+"domeobel1sk"+icon)
+		overwrite.take_over_path(GAME_ICON_PATH+"domeobel1sk"+icon.trim_prefix("obel1sk_"))
 	
 	for i in range(6):
 		var id = i + 1

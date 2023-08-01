@@ -25,14 +25,15 @@ func _ready():
 				frame_count = 7
 		
 		$Sprite.frames.add_animation(str(a, "_domeobel1sk"))
+		
 		for i in range(frame_count):
-			var path = str(tex_path, str(a, "_domeobel1sk"), i, ".png")
+			var path = str(tex_path, str("obel1sk_", a, "_domeobel1sk"), i, ".png")
 			$Sprite.frames.add_frame(str(a, "_domeobel1sk"), load(path), i)
 	
 	
 	$Sprite/Fruit.frames.add_animation("shine_domeobel1sk")
 	for i in range(5):
-		var path = str(tex_path, "fruit", i, ".png")
+		var path = str(tex_path, "obel1sk_fruit", i, ".png")
 		$Sprite/Fruit.frames.add_frame("shine_domeobel1sk", load(path), i)
 	
 	if Level.domeId() == "domeobel1sk":

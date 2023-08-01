@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/BarDark.png" type="Texture" id=1]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/Slidercsp.png" type="Texture" id=2]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/QuickReloadBound2.png" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_BarDark.png" type="Texture" id=1]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_Slidercsp.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_QuickReloadBound2.png" type="Texture" id=3]
 [ext_resource path="res://systems/audio/Sound.tscn" type="PackedScene" id=4]
 [ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/QuickReload.gd" type="Script" id=5]
 [ext_resource path="res://content/sounds/Weapons/obelisk/quickreloadwindow.wav" type="AudioStream" id=6]
-[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/QuickReloadWindowSquash.png" type="Texture" id=7]
+[ext_resource path="res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/img/obel1sk_QuickReloadWindowSquash.png" type="Texture" id=7]
 
 [node name="QuickReload" type="Node2D"]
 script = ExtResource( 5 )

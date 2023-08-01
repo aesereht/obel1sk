@@ -12,7 +12,7 @@ func _ready():
 	$Sprite.frames.add_animation("filling_domeobel1sk")
 	var tex_path = ovr_dir + "content/dome/domeobel1sk/dome/"
 	for i in range(23):
-		var path = str(tex_path, "repellantfill", i, ".png")
+		var path = str(tex_path, "obel1sk_repellantfill", i, ".png")
 		$Sprite.frames.add_frame("filling_domeobel1sk", load(path), i)
 	
 	
