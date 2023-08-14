@@ -78,7 +78,7 @@ var detectedMonsters := [] # the entire spread area (dynamic)
 var cur_bridgeTime := 0.0
 
 var follow_reticle_target := false
-var cur_reticle_target : ReticleTarget = null
+#var cur_reticle_target : ReticleTarget = null
 var is_active := false
 var near_target_slowdown_increase = 0.1
 var cur_near_target_slowdown = 0
@@ -131,10 +131,11 @@ func _physics_process(delta: float) -> void:
 	if not is_active:
 		return
 	if follow_reticle_target:
-		if is_instance_valid(cur_reticle_target):
-			var target_pos = cur_reticle_target.global_position
-			var dist_to_target = target_pos.distance_to(global_position)
-			input = (target_pos - global_position).normalized() * delta * dist_to_target
+		return
+#		if is_instance_valid(cur_reticle_target):
+#			var target_pos = cur_reticle_target.global_position
+#			var dist_to_target = target_pos.distance_to(global_position)
+#			input = (target_pos - global_position).normalized() * delta * dist_to_target
 	else:
 		# clamp reticle to edges of screen
 		var x1 = 465*2 # max extents at 1.0 zoom

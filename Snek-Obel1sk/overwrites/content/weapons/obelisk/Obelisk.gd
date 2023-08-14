@@ -96,8 +96,8 @@ enum ControlModes{
 	MousePing
 }
 export (ControlModes) var control_mode = ControlModes.Keyboard
-var reticle_target : ReticleTarget = null
-const RETICLE_TARGET = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ReticleTarget.tscn")
+#var reticle_target : ReticleTarget = null
+#const RETICLE_TARGET = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ReticleTarget.tscn")
 const LIGHTNING_UP = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/LightningUp.tscn")
 const ARC = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/ObeliskShockArc.tscn")
 const KILLSTREAK = preload("res://mods-unpacked/Snek-Obel1sk/overwrites/content/weapons/obelisk/KillstreakEffect.tscn")
@@ -749,8 +749,8 @@ func start():
 	$Reticle.visible = true
 	
 	# there's a bug somewhere that the reticle can be controlled with keyboard controls until the first ping comes and I can't figure out where it is, so for now this is a hack around that problem
-	if control_mode == ControlModes.MousePing:
-		ping_reticle_target($ReticleSpawn.position)
+#	if control_mode == ControlModes.MousePing:
+#		ping_reticle_target($ReticleSpawn.position)
 	
 	$StartSound.play()
 	if Data.of("obel1sk.chStyle") == 5 and not Data.of("obel1sk.attackType") == 1:
@@ -821,19 +821,19 @@ func set_can_shoot(value:bool):
 func set_is_active(value:bool):
 	is_active = value
 	
-	if control_mode == ControlModes.MouseDrag:
-		if is_active:
-			var tar = RETICLE_TARGET.instance()
-			tar.init(false)
-			add_child(tar)
-			reticle_target = tar
-			$Reticle.cur_reticle_target = tar
-			$Reticle.follow_reticle_target = true
-		else:
-			$Reticle.follow_reticle_target = false
-			$Reticle.cur_reticle_target = null
-			reticle_target.queue_free()
-			reticle_target = null
+#	if control_mode == ControlModes.MouseDrag:
+#		if is_active:
+#			var tar = RETICLE_TARGET.instance()
+#			tar.init(false)
+#			add_child(tar)
+#			reticle_target = tar
+#			$Reticle.cur_reticle_target = tar
+#			$Reticle.follow_reticle_target = true
+#		else:
+#			$Reticle.follow_reticle_target = false
+#			$Reticle.cur_reticle_target = null
+#			reticle_target.queue_free()
+#			reticle_target = null
 	
 	$Reticle.is_active = is_active or (timeSinceLastShot < 2.0 and not is_reloading)
 	$QuickReload.set_visible(false)
@@ -1180,16 +1180,16 @@ func reticle_reload_anim():
 #		if event is InputEventMouseButton and control_mode == ControlModes.MousePing:
 #			ping_reticle_target(get_global_mouse_position())
 
-func ping_reticle_target(target_pos:Vector2):
-	if is_instance_valid(reticle_target):
-		reticle_target.decrement_blockers()
-	var tar = RETICLE_TARGET.instance()
-	tar.init(true)
-	tar.global_position = target_pos
-	add_child(tar)
-	reticle_target = tar
-	$Reticle.cur_reticle_target = tar
-	$Reticle.follow_reticle_target = true
+#func ping_reticle_target(target_pos:Vector2):
+#	if is_instance_valid(reticle_target):
+#		reticle_target.decrement_blockers()
+#	var tar = RETICLE_TARGET.instance()
+#	tar.init(true)
+#	tar.global_position = target_pos
+#	add_child(tar)
+#	reticle_target = tar
+#	$Reticle.cur_reticle_target = tar
+#	$Reticle.follow_reticle_target = true
 
 func getFireName():
 	return "level.station.battle.navbar.shoot"

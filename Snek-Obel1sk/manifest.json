@@ -2,15 +2,15 @@
 	"name": "Obel1sk",
 	"namespace": "Snek",
 	"version_number": "1.0.0",
-	"description": "The first iteration of the Obelisk Dome (or whatever it ends up being called) that playtesters got to play in December 2022. Courtesy of yours truly, intern-turned-Dome team member, Fio (they/them).",
-	"website_url": "https://github.com/example/repo",
+	"description": "PHOSPHORESCENCE. A very early build of the Tesla Dome that playtesters got to play in December 2022.",
+	"website_url": "https://github.com/SnekOfSpice/obel1sk",
 	"dependencies": [],
 	"extra": {
 		"godot": {
 			"incompatibilities": [],
 			"authors": ["Fio Leukert"],
 			"compatible_mod_loader_version": ["3.0.0"],
-			"compatible_game_version": ["0.6.1.6"],
+			"compatible_game_version": ["2.6.3"],
 			"config_defaults": {}
 		}
 	}
